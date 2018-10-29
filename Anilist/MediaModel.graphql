@@ -1,0 +1,33 @@
+query MediaSearch($page: Int!, $seasonYear: Int!, $season: MediaSeason) {
+    Page(page: $page) {
+        pageInfo {
+            total
+            perPage
+            currentPage
+            lastPage
+            hasNextPage
+        }
+        media(season: $season,seasonYear: $seasonYear) {
+            ...MediaDetail
+        }
+    }
+}
+
+fragment MediaDetail on Media {
+    id
+    title {
+        native
+    }
+    coverImage {
+        extraLarge
+        large
+        medium
+    }
+    bannerImage
+    coverImage {
+        extraLarge
+        large
+        medium
+    }
+}
+

@@ -15,6 +15,11 @@
 		5C09D2DD217C85D1006122AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C09D2DB217C85D1006122AE /* LaunchScreen.storyboard */; };
 		5C09D2E8217C85D1006122AE /* AnilistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09D2E7217C85D1006122AE /* AnilistTests.swift */; };
 		5C09D2F3217C85D1006122AE /* AnilistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09D2F2217C85D1006122AE /* AnilistUITests.swift */; };
+		5C61B2442183678B0056A025 /* MediaModel.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 5C61B2432183678B0056A025 /* MediaModel.graphql */; };
+		5C61B24821836FE20056A025 /* MediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C61B24721836FE20056A025 /* MediaModel.swift */; };
+		5C61B24A2183706E0056A025 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C61B2492183706E0056A025 /* API.swift */; };
+		5C61B24B218375830056A025 /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFB2BD8218212920088BD65 /* Apollo.framework */; };
+		5C61B24D218451310056A025 /* GraphAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C61B24C218451310056A025 /* GraphAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		5C09D2EE217C85D1006122AE /* AnilistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnilistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C09D2F2217C85D1006122AE /* AnilistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnilistUITests.swift; sourceTree = "<group>"; };
 		5C09D2F4217C85D1006122AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C61B2432183678B0056A025 /* MediaModel.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = MediaModel.graphql; sourceTree = "<group>"; };
+		5C61B24721836FE20056A025 /* MediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaModel.swift; sourceTree = "<group>"; };
+		5C61B2492183706E0056A025 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		5C61B24C218451310056A025 /* GraphAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphAPIClient.swift; sourceTree = "<group>"; };
+		5CFB2BD8218212920088BD65 /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apollo.framework; path = Carthage/Build/iOS/Apollo.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C61B24B218375830056A025 /* Apollo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +94,7 @@
 				5C09D2E6217C85D1006122AE /* AnilistTests */,
 				5C09D2F1217C85D1006122AE /* AnilistUITests */,
 				5C09D2CE217C85D0006122AE /* Products */,
+				5CFB2BD7218212920088BD65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +114,10 @@
 				5C09D2D0217C85D0006122AE /* AppDelegate.swift */,
 				5C09D2D2217C85D0006122AE /* FirstViewController.swift */,
 				5C09D2D4217C85D0006122AE /* SecondViewController.swift */,
+				5C61B2432183678B0056A025 /* MediaModel.graphql */,
+				5C61B24721836FE20056A025 /* MediaModel.swift */,
+				5C61B24C218451310056A025 /* GraphAPIClient.swift */,
+				5C61B2492183706E0056A025 /* API.swift */,
 				5C09D2D6217C85D0006122AE /* Main.storyboard */,
 				5C09D2D9217C85D1006122AE /* Assets.xcassets */,
 				5C09D2DB217C85D1006122AE /* LaunchScreen.storyboard */,
@@ -128,6 +144,14 @@
 			path = AnilistUITests;
 			sourceTree = "<group>";
 		};
+		5CFB2BD7218212920088BD65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CFB2BD8218212920088BD65 /* Apollo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C09D2F7217C85D1006122AE /* Build configuration list for PBXNativeTarget "Anilist" */;
 			buildPhases = (
+				5CFB2BD6218209B10088BD65 /* Generate Apollo GraphQL API */,
 				5C09D2C9217C85D0006122AE /* Sources */,
 				5C09D2CA217C85D0006122AE /* Frameworks */,
 				5C09D2CB217C85D0006122AE /* Resources */,
+				5CFB2BD5218201400088BD65 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -235,6 +261,7 @@
 				5C09D2DD217C85D1006122AE /* LaunchScreen.storyboard in Resources */,
 				5C09D2DA217C85D1006122AE /* Assets.xcassets in Resources */,
 				5C09D2D8217C85D0006122AE /* Main.storyboard in Resources */,
+				5C61B2442183678B0056A025 /* MediaModel.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,14 +281,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5CFB2BD5218201400088BD65 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Apollo.framework",
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\necho \"Carthage copy frameworks Step\"\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+		5CFB2BD6218209B10088BD65 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"Apollo Codegen Step\"\nAPOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}/\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-cli.sh codegen:generate API.swift --queries=\"$(find . -name '*.graphql')\" --schema=schema.json\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5C09D2C9217C85D0006122AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5C09D2D5217C85D0006122AE /* SecondViewController.swift in Sources */,
+				5C61B24821836FE20056A025 /* MediaModel.swift in Sources */,
+				5C61B24D218451310056A025 /* GraphAPIClient.swift in Sources */,
 				5C09D2D1217C85D0006122AE /* AppDelegate.swift in Sources */,
 				5C09D2D3217C85D0006122AE /* FirstViewController.swift in Sources */,
+				5C61B24A2183706E0056A025 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +508,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7TTVB9977;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Anilist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +530,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7TTVB9977;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Anilist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
