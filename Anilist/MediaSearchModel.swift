@@ -1,5 +1,5 @@
 //
-//  MediaModel.swift
+//  MediaSearchModel.swift
 //  Anilist
 //
 //  Created by NaotoIto on 2018/10/27.
@@ -9,11 +9,11 @@
 import Foundation
 import Apollo
 
-class MediaModel: NSObject {
+class MediaSearchModel: NSObject {
     typealias MediaList = MediaSearchQuery.Data.Page
     
     let apollo = ApolloClient(url: URL(string: "https://graphql.anilist.co")!)
-    var medias = [MediaList?]()
+    var medias : [MediaList?] = [MediaList]()
     
     func fetch(page: Int, seasonYear: Int, season:MediaSeason?, complition: @escaping (MediaList?)->Void) {
 //        let id : Int! = 100182
