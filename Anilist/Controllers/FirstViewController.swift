@@ -14,17 +14,14 @@ class FirstViewController: UIViewController {
     
     let mediaSearchModel = MediaSearchModel()
     
-    let queue = DispatchQueue(label: "first view")
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
         
-        mediaSearchModel.fetch(page: 1, seasonYear: 2018, season: .spring) { [weak self] mediaList in
+        mediaSearchModel.fetch(page: 1, seasonYear: 2018, season: .spring) { [weak self] page in
             guard let `self` = self else {return}
-            guard let first = mediaList?.media?.first else {return}
             self.tableView.reloadData()
 //            self.titleLabel.text = first?.fragments.mediaDetail.title?.native
         }
@@ -39,28 +36,20 @@ extension FirstViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let count = mediaSearchModel.medias.first??.pageInfo?.perPage else {return 0}
-        return count
+        return mediaSearchModel.totalDisplayPage
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        guard let currentPage = mediaSearchModel.medias.first??.pageInfo?.currentPage else {return UITableViewCell()}
-        guard let media = mediaSearchModel.medias[currentPage - 1]?.media?[indexPath.row] else  {return UITableViewCell()}
+        guard let currentPage = mediaSearchModel.pageDataSet.first?.pageInfo?.currentPage else {return UITableViewCell()}
+        guard let media = mediaSearchModel.pageDataSet[currentPage - 1].media?[indexPath.row] else  {return UITableViewCell()}
         cell.textLabel?.text = media.fragments.mediaDetail.title?.native
         guard let urlString = media.fragments.mediaDetail.coverImage?.medium else {return cell}
         guard let url = URL(string: urlString) else {return cell}
-        
-        queue.async { [weak cell] in
-            guard let cell = cell else {return}
-            let imageData = try? Data(contentsOf: url)
-            guard let data = imageData else {return }
-            let image = UIImage(data: data)
-            DispatchQueue.main.async {
-                cell.imageView?.image = image
-            }
-
+        cell.imageView?.image = UIImage()
+        cell.imageView?.load(url: url) {
+            cell.setNeedsLayout()
         }
         return cell
     }

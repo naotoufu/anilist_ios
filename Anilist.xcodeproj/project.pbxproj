@@ -21,6 +21,9 @@
 		5C61B24B218375830056A025 /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFB2BD8218212920088BD65 /* Apollo.framework */; };
 		5C61B24D218451310056A025 /* GraphAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C61B24C218451310056A025 /* GraphAPIClient.swift */; };
 		5C955CD2218B45DE005A0EB1 /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CD1218B45DE005A0EB1 /* Utilites.swift */; };
+		5C955CD8218EB845005A0EB1 /* PageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CD7218EB845005A0EB1 /* PageInfo.swift */; };
+		5C955CDB218EC2B0005A0EB1 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CD9218EC2B0005A0EB1 /* ImageCollectionViewCell.swift */; };
+		5C955CDC218EC2B0005A0EB1 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C955CDA218EC2B0005A0EB1 /* ImageCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		5C61B2492183706E0056A025 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		5C61B24C218451310056A025 /* GraphAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphAPIClient.swift; sourceTree = "<group>"; };
 		5C955CD1218B45DE005A0EB1 /* Utilites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilites.swift; sourceTree = "<group>"; };
+		5C955CD7218EB845005A0EB1 /* PageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageInfo.swift; sourceTree = "<group>"; };
+		5C955CD9218EC2B0005A0EB1 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		5C955CDA218EC2B0005A0EB1 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		5CFB2BD8218212920088BD65 /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apollo.framework; path = Carthage/Build/iOS/Apollo.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,18 +119,18 @@
 		5C09D2CF217C85D0006122AE /* Anilist */ = {
 			isa = PBXGroup;
 			children = (
-				5C09D2D0217C85D0006122AE /* AppDelegate.swift */,
-				5C09D2D2217C85D0006122AE /* FirstViewController.swift */,
-				5C955CD1218B45DE005A0EB1 /* Utilites.swift */,
-				5C09D2D4217C85D0006122AE /* SecondViewController.swift */,
-				5C61B2432183678B0056A025 /* MediaSearchModel.graphql */,
-				5C61B24721836FE20056A025 /* MediaSearchModel.swift */,
-				5C61B24C218451310056A025 /* GraphAPIClient.swift */,
-				5C61B2492183706E0056A025 /* API.swift */,
-				5C09D2D6217C85D0006122AE /* Main.storyboard */,
-				5C09D2D9217C85D1006122AE /* Assets.xcassets */,
-				5C09D2DB217C85D1006122AE /* LaunchScreen.storyboard */,
 				5C09D2DE217C85D1006122AE /* Info.plist */,
+				5C61B2492183706E0056A025 /* API.swift */,
+				5C09D2D0217C85D0006122AE /* AppDelegate.swift */,
+				5C61B24C218451310056A025 /* GraphAPIClient.swift */,
+				5C955CD7218EB845005A0EB1 /* PageInfo.swift */,
+				5C955CD1218B45DE005A0EB1 /* Utilites.swift */,
+				5C09D2D9217C85D1006122AE /* Assets.xcassets */,
+				5C955CDE218EC87F005A0EB1 /* Controllers */,
+				5C09D2DB217C85D1006122AE /* LaunchScreen.storyboard */,
+				5C09D2D6217C85D0006122AE /* Main.storyboard */,
+				5C955CDF218EC893005A0EB1 /* Models */,
+				5C955CDD218EC86C005A0EB1 /* Views */,
 			);
 			path = Anilist;
 			sourceTree = "<group>";
@@ -145,6 +151,33 @@
 				5C09D2F4217C85D1006122AE /* Info.plist */,
 			);
 			path = AnilistUITests;
+			sourceTree = "<group>";
+		};
+		5C955CDD218EC86C005A0EB1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5C955CD9218EC2B0005A0EB1 /* ImageCollectionViewCell.swift */,
+				5C955CDA218EC2B0005A0EB1 /* ImageCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5C955CDE218EC87F005A0EB1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C09D2D2217C85D0006122AE /* FirstViewController.swift */,
+				5C09D2D4217C85D0006122AE /* SecondViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5C955CDF218EC893005A0EB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C61B2432183678B0056A025 /* MediaSearchModel.graphql */,
+				5C61B24721836FE20056A025 /* MediaSearchModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5CFB2BD7218212920088BD65 /* Frameworks */ = {
@@ -265,6 +298,7 @@
 				5C09D2DA217C85D1006122AE /* Assets.xcassets in Resources */,
 				5C09D2D8217C85D0006122AE /* Main.storyboard in Resources */,
 				5C61B2442183678B0056A025 /* MediaSearchModel.graphql in Resources */,
+				5C955CDC218EC2B0005A0EB1 /* ImageCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +367,9 @@
 				5C61B24821836FE20056A025 /* MediaSearchModel.swift in Sources */,
 				5C61B24D218451310056A025 /* GraphAPIClient.swift in Sources */,
 				5C09D2D1217C85D0006122AE /* AppDelegate.swift in Sources */,
+				5C955CD8218EB845005A0EB1 /* PageInfo.swift in Sources */,
 				5C09D2D3217C85D0006122AE /* FirstViewController.swift in Sources */,
+				5C955CDB218EC2B0005A0EB1 /* ImageCollectionViewCell.swift in Sources */,
 				5C61B24A2183706E0056A025 /* API.swift in Sources */,
 				5C955CD2218B45DE005A0EB1 /* Utilites.swift in Sources */,
 			);
