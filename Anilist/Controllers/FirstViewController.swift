@@ -16,7 +16,8 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        tableView.register(UINib(nibName: "\(LoadingFooterView.self)", bundle: nil), forHeaderFooterViewReuseIdentifier: LoadingFooterView.identifier)
+        tableView.tableFooterView = UINib(nibName: "\(LoadingFooterView.self)", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! LoadingFooterView
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -37,14 +38,14 @@ extension FirstViewController: UITableViewDataSource {
         return presenter.totalMediaDetails
     }
     
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 44
-    }
-    
-    
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return LoadingFooterView(frame: CGRect(origin: .zero, size: CGSize(width: UIScreen.main.bounds.width, height: 44)))
-    }
+//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        return 44
+//    }
+//
+//
+//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        return tableView.dequeueReusableHeaderFooterView(withIdentifier: LoadingFooterView.identifier)
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard presenter.mediaDetails.count > 0 else {return UITableViewCell()}

@@ -13,9 +13,10 @@ class LoadingFooterView: UITableViewHeaderFooterView {
     static let identifier = "\(LoadingFooterView.self)"
     
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
-//    override func awakeFromNib() {
-//        <#code#>
-//    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        activityIndicatorView.startAnimating()
+    }
 
     /*
     // Only override draw() if you perform custom drawing.

@@ -25,7 +25,7 @@
 		5C955CDB218EC2B0005A0EB1 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CD9218EC2B0005A0EB1 /* ImageCollectionViewCell.swift */; };
 		5C955CDC218EC2B0005A0EB1 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C955CDA218EC2B0005A0EB1 /* ImageCollectionViewCell.xib */; };
 		5C955CE1218F3A69005A0EB1 /* LoadingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CE0218F3A69005A0EB1 /* LoadingFooterView.swift */; };
-		5C955CE5218F3ACF005A0EB1 /* LoadingrFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C955CE4218F3ACF005A0EB1 /* LoadingrFooterView.xib */; };
+		5C955CE5218F3ACF005A0EB1 /* LoadingFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C955CE4218F3ACF005A0EB1 /* LoadingFooterView.xib */; };
 		5C955CE7218F4158005A0EB1 /* FirstPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CE6218F4158005A0EB1 /* FirstPresenter.swift */; };
 		5C955CEA21907D3D005A0EB1 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CE921907D3D005A0EB1 /* Media.swift */; };
 		5C955CED21907D98005A0EB1 /* MediaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CEC21907D98005A0EB1 /* MediaDetail.swift */; };
@@ -78,7 +78,7 @@
 		5C955CD9218EC2B0005A0EB1 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		5C955CDA218EC2B0005A0EB1 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		5C955CE0218F3A69005A0EB1 /* LoadingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooterView.swift; sourceTree = "<group>"; };
-		5C955CE4218F3ACF005A0EB1 /* LoadingrFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingrFooterView.xib; sourceTree = "<group>"; };
+		5C955CE4218F3ACF005A0EB1 /* LoadingFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingFooterView.xib; sourceTree = "<group>"; };
 		5C955CE6218F4158005A0EB1 /* FirstPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPresenter.swift; sourceTree = "<group>"; };
 		5C955CE921907D3D005A0EB1 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		5C955CEC21907D98005A0EB1 /* MediaDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetail.swift; sourceTree = "<group>"; };
@@ -181,7 +181,7 @@
 				5C955CD9218EC2B0005A0EB1 /* ImageCollectionViewCell.swift */,
 				5C955CDA218EC2B0005A0EB1 /* ImageCollectionViewCell.xib */,
 				5C955CE0218F3A69005A0EB1 /* LoadingFooterView.swift */,
-				5C955CE4218F3ACF005A0EB1 /* LoadingrFooterView.xib */,
+				5C955CE4218F3ACF005A0EB1 /* LoadingFooterView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -354,7 +354,7 @@
 				5C09D2DD217C85D1006122AE /* LaunchScreen.storyboard in Resources */,
 				5C09D2DA217C85D1006122AE /* Assets.xcassets in Resources */,
 				5C09D2D8217C85D0006122AE /* Main.storyboard in Resources */,
-				5C955CE5218F3ACF005A0EB1 /* LoadingrFooterView.xib in Resources */,
+				5C955CE5218F3ACF005A0EB1 /* LoadingFooterView.xib in Resources */,
 				5C61B2442183678B0056A025 /* MediaSearchModel.graphql in Resources */,
 				5C955CDC218EC2B0005A0EB1 /* ImageCollectionViewCell.xib in Resources */,
 			);

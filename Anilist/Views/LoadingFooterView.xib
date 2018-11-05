@@ -9,27 +9,33 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
-            <connections>
-                <outlet property="activityIndicatorView" destination="8e9-Yw-GK6" id="qj9-Td-1A0"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="j6B-zA-Ele" customClass="LoadingFooterView" customModule="Anilist" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="8e9-Yw-GK6">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nK-by-hco">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="8e9-Yw-GK6">
                     <rect key="frame" x="177.5" y="30.5" width="20" height="20"/>
                 </activityIndicatorView>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="8e9-Yw-GK6" firstAttribute="centerX" secondItem="j6B-zA-Ele" secondAttribute="centerX" id="0RE-cY-MuS"/>
+                <constraint firstItem="5nK-by-hco" firstAttribute="top" secondItem="j6B-zA-Ele" secondAttribute="top" id="1Ai-k6-na1"/>
+                <constraint firstItem="bhP-pd-mq4" firstAttribute="trailing" secondItem="5nK-by-hco" secondAttribute="trailing" id="AGW-88-5ql"/>
+                <constraint firstItem="5nK-by-hco" firstAttribute="leading" secondItem="bhP-pd-mq4" secondAttribute="leading" id="rQz-E4-mj9"/>
+                <constraint firstAttribute="bottom" secondItem="5nK-by-hco" secondAttribute="bottom" id="vnh-q9-FjH"/>
                 <constraint firstItem="8e9-Yw-GK6" firstAttribute="centerY" secondItem="j6B-zA-Ele" secondAttribute="centerY" id="wYX-Ka-fNm"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="bhP-pd-mq4"/>
+            <connections>
+                <outlet property="activityIndicatorView" destination="8e9-Yw-GK6" id="c4o-2L-FRa"/>
+            </connections>
             <point key="canvasLocation" x="128.80000000000001" y="-396.25187406296857"/>
         </view>
     </objects>
