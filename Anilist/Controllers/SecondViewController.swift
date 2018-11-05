@@ -20,7 +20,7 @@ class SecondViewController: UIViewController {
         collectionView.register(UINib(nibName: ImageCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ImageCollectionViewCell.identifier)
         
         collectionView.dataSource = self
-        mediaSearchModel.fetch(page: 1, seasonYear: 2018, season: .spring) { [weak self] page in
+        mediaSearchModel.fetch(seasonYear: 2018, season: .spring) { [weak self] pageData,pageInfo in
             guard let `self` = self else {return}
             self.collectionView.reloadData()
             //            self.titleLabel.text = first?.fragments.mediaDetail.title?.native
@@ -33,7 +33,7 @@ class SecondViewController: UIViewController {
 
 extension SecondViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return mediaSearchModel.totalDisplayPage
+        return mediaSearchModel.pageDataSet.first?.media?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

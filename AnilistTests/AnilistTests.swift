@@ -25,9 +25,9 @@ class AnilistTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let expectation = self.expectation(description: "Fetch Media")
-        mediaSearchModel.fetch(page: 1, seasonYear: 2018, season: .spring) { [weak self] mediaList in
+        mediaSearchModel.fetch(page: 1, seasonYear: 2018, season: .spring) { [weak self] pageData, pageInfo in
             guard let `self` = self else {return}
-            guard let first = mediaList?.media?.first else {return}
+            guard let first = pageData.media?.first else {return}
             expectation.fulfill()
             XCTAssertEqual(first?.fragments.mediaDetail.title?.native, "ハイスコアガール", "first item is \(String(describing: first?.fragments.mediaDetail.title?.native))")
         }

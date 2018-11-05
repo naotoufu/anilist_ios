@@ -10,17 +10,17 @@ import Foundation
 import Apollo
 
 class MediaSearchModel: NSObject {
-    typealias Page = MediaSearchQuery.Data.Page
+    typealias PageData = MediaSearchQuery.Data.Page
     
     let apollo = ApolloClient(url: URL(string: "https://graphql.anilist.co")!)
-    var pageDataSet : [Page] = [Page]()
+    var pageDataSet : [PageData] = [PageData]()
     
-    var currentPageDataSet : Page {
+    var currentPageDataSet : PageData {
         return pageDataSet[pageInfo.currentPage - 1]
     }
     
     // media, graphQL medium
-    var media : [MediaSearchQuery.Data.Page.Medium?]? {
+    var medias : [MediaSearchQuery.Data.Page.Medium?]? {
         return currentPageDataSet.media
     }
     
@@ -32,27 +32,20 @@ class MediaSearchModel: NSObject {
         return PageInfo(graphQLpageInfo: pageInfo)
     }
 
-    var totalDisplayPage = 0
     
-    func fetch(page: Int, seasonYear: Int, season:MediaSeason?, complition: @escaping (Page)->Void) {
-        currentPage = page
-//        let id : Int! = 100182
-//        MediaSearchQuery.init(page: page, seasonYear: seasonYear, season: season)
-//        apollo.watch(query: MediaSearchQuery(page: page, seasonYear: seasonYear)) { (result, error)
-//            in
-//            print(result?.data?.page)
-//        }
+    func fetch(page: Int = 1, seasonYear: Int, season:MediaSeason?, complition: @escaping (PageData, PageInfo)->Void) {
         apollo.fetch(query: MediaSearchQuery(page: page, seasonYear: seasonYear)) { [weak self] (result, error)
             in
             guard let `self` = self else { return }
             if let _ = error {return}
-            guard let page = result?.data?.page else {return}
-            self.pageDataSet.append(page)
-            if self.currentPage != self.pageInfo.lastPage {self.totalDisplayPage += self.pageInfo.perPage}
-            complition(page)
-//            print(result?.data?.page) // Luke Skywalker
+            guard let pageData = result?.data?.page else {return}
+            self.pageDataSet.append(pageData)
+            complition(pageData, self.pageInfo)
         }
-//        apollo.fetch(query: MediaQuery(page: page, seasonYear: seasonYear, season: season)) { (result, error) in
-//        }
+    }
+    
+    func nextPageFetch(seasonYear: Int, season:MediaSeason?, complition: @escaping (PageData, PageInfo)->Void) {
+        self.currentPage += 1
+        self.fetch(page: self.currentPage, seasonYear: seasonYear, season:season, complition: complition)
     }
 }

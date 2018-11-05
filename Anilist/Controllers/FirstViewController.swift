@@ -12,7 +12,7 @@ class FirstViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let mediaSearchModel = MediaSearchModel()
+    lazy var presenter : FirstPresenter = FirstPresenter(viewController: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +20,8 @@ class FirstViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        mediaSearchModel.fetch(page: 1, seasonYear: 2018, season: .spring) { [weak self] page in
-            guard let `self` = self else {return}
-            self.tableView.reloadData()
-//            self.titleLabel.text = first?.fragments.mediaDetail.title?.native
+        presenter.fetch(seasonYear: 2018, season: .spring) { [weak self] in
+            self?.tableView.reloadData()
         }
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -36,22 +34,38 @@ extension FirstViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mediaSearchModel.totalDisplayPage
+        return presenter.totalMediaDetails
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 44
     }
     
     
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return LoadingFooterView(frame: CGRect(origin: .zero, size: CGSize(width: UIScreen.main.bounds.width, height: 44)))
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard presenter.mediaDetails.count > 0 else {return UITableViewCell()}
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        guard let currentPage = mediaSearchModel.pageDataSet.first?.pageInfo?.currentPage else {return UITableViewCell()}
-        guard let media = mediaSearchModel.pageDataSet[currentPage - 1].media?[indexPath.row] else  {return UITableViewCell()}
-        cell.textLabel?.text = media.fragments.mediaDetail.title?.native
-        guard let urlString = media.fragments.mediaDetail.coverImage?.medium else {return cell}
+        let mediaDetail = presenter.mediaDetails[indexPath.row]
+        cell.textLabel?.text = mediaDetail.title?.native
+        guard let urlString = mediaDetail.coverImage?.medium else {return cell}
         guard let url = URL(string: urlString) else {return cell}
         cell.imageView?.image = UIImage()
         cell.imageView?.load(url: url) {
             cell.setNeedsLayout()
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if presenter.hasNextPage && indexPath.row == presenter.totalMediaDetails - 1 {
+            presenter.nextPageFetch(seasonYear: 2018, season: .spring) {[weak self] in
+                self?.tableView.reloadData()
+            }
+        }
     }
     
 }

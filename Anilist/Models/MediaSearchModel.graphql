@@ -24,10 +24,5 @@ fragment MediaDetail on Media {
         medium
     }
     bannerImage
-    coverImage {
-        extraLarge
-        large
-        medium
-    }
 }
 
