@@ -8,15 +8,18 @@ query MediaSearch($page: Int!, $seasonYear: Int!, $season: MediaSeason) {
             hasNextPage
         }
         media(season: $season,seasonYear: $seasonYear) {
-            ...MediaDetail
+            ...MediaListFragment
         }
     }
 }
 
-fragment MediaDetail on Media {
+fragment MediaListFragment on Media {
     id
     title {
+        romaji
+        english
         native
+        userPreferred
     }
     coverImage {
         extraLarge

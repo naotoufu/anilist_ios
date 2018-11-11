@@ -26,4 +26,18 @@ struct MediaTitle {
     // The currently authenticated users preferred title language. Default romaji for
     // non-authenticated
     var userPreferred: String
+    
+    init(title :MediaListFragment.Title?) {
+        self.romaji = title?.romaji ?? ""
+        self.native = title?.native ?? ""
+        self.english = title?.english ?? ""
+        self.userPreferred = title?.userPreferred ?? ""
+    }
+    
+    init(title :MediaDetailFragment.Title?) {
+        self.romaji = title?.romaji ?? ""
+        self.native = title?.native ?? ""
+        self.english = title?.english ?? ""
+        self.userPreferred = title?.userPreferred ?? ""
+    }
 }

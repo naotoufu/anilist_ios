@@ -1,0 +1,22 @@
+query MediaDetail($id: Int!) {
+
+    Media(id: $id) {
+        ...MediaDetailFragment
+    }
+}
+
+fragment MediaDetailFragment on Media {
+    id
+    title {
+        romaji
+        english
+        native
+        userPreferred
+    }
+    coverImage {
+        extraLarge
+        large
+        medium
+    }
+    bannerImage
+}

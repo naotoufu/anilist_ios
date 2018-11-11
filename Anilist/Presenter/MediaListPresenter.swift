@@ -7,18 +7,18 @@
 //
 
 import Foundation
-class FirstPresenter: NSObject {
-    fileprivate weak var viewController : FirstViewController!
+class MediaListPresenter: NSObject {
+    fileprivate weak var viewController : MediaListViewController!
     
-    init(viewController: FirstViewController){
+    init(viewController: MediaListViewController){
         self.viewController = viewController
     }
     
     let mediaSearchModel = MediaSearchModel()
     
-    var mediaDetails : [MediaDetail] = [MediaDetail]()
+    var mediaFragments : [MediaListViewFragment] = [MediaListViewFragment]()
     
-    var totalMediaDetails = 0
+    var totalMediaFragments = 0
     
     var hasNextPage : Bool = false
     
@@ -27,8 +27,8 @@ class FirstPresenter: NSObject {
             guard let `self` = self else {return}
             guard let media = pageData.media else {return}
             self.hasNextPage = pageInfo.hasNextPage
-            self.totalMediaDetails += pageInfo.hasNextPage ? pageInfo.perPage : pageInfo.total
-            self.mediaDetails += media.compactMap({$0?.fragments.mediaDetail})
+            self.totalMediaFragments += pageInfo.hasNextPage ? pageInfo.perPage : pageInfo.total
+            self.mediaFragments += media.compactMap({MediaListViewFragment(fragment: $0?.fragments.mediaListFragment)})
 //            self.viewController.tableView.reloadData()
             complition()
         }
@@ -38,8 +38,8 @@ class FirstPresenter: NSObject {
         mediaSearchModel.nextPageFetch(seasonYear: seasonYear, season: season) { [weak self] pageData, pageInfo in
             guard let `self` = self else {return}
             guard let media = pageData.media else {return}
-            self.totalMediaDetails += pageInfo.hasNextPage ? pageInfo.perPage : pageInfo.total
-            self.mediaDetails += media.compactMap({$0?.fragments.mediaDetail})
+            self.totalMediaFragments += pageInfo.hasNextPage ? pageInfo.perPage : pageInfo.total
+            self.mediaFragments += media.compactMap({MediaListViewFragment(fragment: $0?.fragments.mediaListFragment)})
 //            self.viewController.tableView.reloadData()
             complition()
         }

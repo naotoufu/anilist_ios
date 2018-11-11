@@ -20,10 +20,10 @@ class SecondViewController: UIViewController {
         collectionView.register(UINib(nibName: ImageCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ImageCollectionViewCell.identifier)
         
         collectionView.dataSource = self
-        mediaSearchModel.fetch(seasonYear: 2018, season: .spring) { [weak self] pageData,pageInfo in
+        mediaSearchModel.fetch(seasonYear: 2018, season: .spring) { [weak self] pageData, pageInfo in
             guard let `self` = self else {return}
             self.collectionView.reloadData()
-            //            self.titleLabel.text = first?.fragments.mediaDetail.title?.native
+            //            self.titleLabel.text = first?.fragments.mediaFgmt.title?.native
         }
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -38,7 +38,7 @@ extension SecondViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as? ImageCollectionViewCell else {return UICollectionViewCell() }
-        cell.configure(imageUrlString: mediaSearchModel.currentPageDataSet.media?[indexPath.row]?.fragments.mediaDetail.coverImage?.large ?? "") {
+        cell.configure(imageUrlString: mediaSearchModel.currentPageDataSet.media?[indexPath.row]?.fragments.mediaListFragment.coverImage?.large ?? "") {
             cell.layoutIfNeeded()
         }
         return cell

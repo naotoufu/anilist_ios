@@ -13,4 +13,16 @@ struct MediaCoverImage {
     var large: String
     // The cover image of media at medium size
     var medium: String
+    
+    init(coverImage: MediaListFragment.CoverImage?) {
+        self.extraLarge = coverImage?.extraLarge ?? ""
+        self.large = coverImage?.large ?? ""
+        self.medium = coverImage?.medium ?? ""
+    }
+    
+    init(coverImage: MediaDetailFragment.CoverImage?) {
+        self.extraLarge = coverImage?.extraLarge ?? ""
+        self.large = coverImage?.large ?? ""
+        self.medium = coverImage?.medium ?? ""
+    }
 }

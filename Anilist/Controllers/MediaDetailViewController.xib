@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MediaDetailViewController" customModule="Anilist" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="Y0x-EN-uTS" customClass="MediaDetailViewController" customModule="Anilist" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="WPb-Ku-lkG">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eai-Nb-ZVi">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tableView>
+                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ee0-NB-FXW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <items>
+                            <navigationItem title="Title" id="rln-6B-WD2">
+                                <barButtonItem key="leftBarButtonItem" title="Item" id="mcI-0p-exE">
+                                    <connections>
+                                        <action selector="tappedLeftNavigationItem:" destination="Y0x-EN-uTS" id="4Nd-a2-xqn"/>
+                                    </connections>
+                                </barButtonItem>
+                            </navigationItem>
+                        </items>
+                    </navigationBar>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="N8s-YJ-byP" firstAttribute="trailing" secondItem="eai-Nb-ZVi" secondAttribute="trailing" id="Gf4-f4-tol"/>
+                    <constraint firstItem="ee0-NB-FXW" firstAttribute="top" secondItem="N8s-YJ-byP" secondAttribute="top" id="YZz-ry-oxZ"/>
+                    <constraint firstItem="ee0-NB-FXW" firstAttribute="trailing" secondItem="N8s-YJ-byP" secondAttribute="trailing" id="c4d-hB-r3w"/>
+                    <constraint firstItem="N8s-YJ-byP" firstAttribute="bottom" secondItem="eai-Nb-ZVi" secondAttribute="bottom" id="eq0-ab-two"/>
+                    <constraint firstItem="eai-Nb-ZVi" firstAttribute="top" secondItem="ee0-NB-FXW" secondAttribute="bottom" id="o8Y-xI-tVN"/>
+                    <constraint firstItem="ee0-NB-FXW" firstAttribute="leading" secondItem="N8s-YJ-byP" secondAttribute="leading" id="sEz-7U-Ezx"/>
+                    <constraint firstItem="eai-Nb-ZVi" firstAttribute="leading" secondItem="N8s-YJ-byP" secondAttribute="leading" id="ybu-xY-Cuj"/>
+                </constraints>
+                <viewLayoutGuide key="safeArea" id="N8s-YJ-byP"/>
+            </view>
+            <connections>
+                <outlet property="navigationBar" destination="ee0-NB-FXW" id="lQh-MC-nk3"/>
+                <outlet property="tableView" destination="eai-Nb-ZVi" id="p4B-Pf-hdm"/>
+            </connections>
+            <point key="canvasLocation" x="188" y="538.38080959520244"/>
+        </viewController>
+    </objects>
+</document>

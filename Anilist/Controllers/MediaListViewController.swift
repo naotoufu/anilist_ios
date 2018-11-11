@@ -8,15 +8,14 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class MediaListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    lazy var presenter : FirstPresenter = FirstPresenter(viewController: self)
+    lazy var presenter : MediaListPresenter = MediaListPresenter(viewController: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.register(UINib(nibName: "\(LoadingFooterView.self)", bundle: nil), forHeaderFooterViewReuseIdentifier: LoadingFooterView.identifier)
         tableView.tableFooterView = UINib(nibName: "\(LoadingFooterView.self)", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! LoadingFooterView
         tableView.delegate = self
         tableView.dataSource = self
@@ -29,40 +28,33 @@ class FirstViewController: UIViewController {
     
 }
 
-extension FirstViewController: UITableViewDataSource {
+extension MediaListViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.totalMediaDetails
+        return presenter.totalMediaFragments
     }
     
-//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//        return 44
-//    }
-//
-//
-//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//        return tableView.dequeueReusableHeaderFooterView(withIdentifier: LoadingFooterView.identifier)
-//    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard presenter.mediaDetails.count > 0 else {return UITableViewCell()}
+        guard presenter.mediaFragments.count > 0 else {return UITableViewCell()}
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let mediaDetail = presenter.mediaDetails[indexPath.row]
-        cell.textLabel?.text = mediaDetail.title?.native
-        guard let urlString = mediaDetail.coverImage?.medium else {return cell}
+        let mediaFragmemnt = presenter.mediaFragments[indexPath.row]
+        cell.textLabel?.text = mediaFragmemnt.title.native
+        let urlString = mediaFragmemnt.coverImage.medium
         guard let url = URL(string: urlString) else {return cell}
-        cell.imageView?.image = UIImage()
+        // place holder
+        cell.imageView?.image = UIImage(color: .white,size: CGSize(width: cell.frame.size.height, height: cell.frame.size.height))
+        // image load async
         cell.imageView?.load(url: url) {
             cell.setNeedsLayout()
         }
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if presenter.hasNextPage && indexPath.row == presenter.totalMediaDetails - 1 {
+        if presenter.hasNextPage && indexPath.row == presenter.totalMediaFragments - 1 {
             presenter.nextPageFetch(seasonYear: 2018, season: .spring) {[weak self] in
                 self?.tableView.reloadData()
             }
@@ -71,6 +63,11 @@ extension FirstViewController: UITableViewDataSource {
     
 }
 
-extension FirstViewController: UITableViewDelegate {
-    
+extension MediaListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard presenter.mediaFragments.count > 0 else {return}
+        let mediaFragment = presenter.mediaFragments[indexPath.row]
+        let vc = MediaDetailViewController.instance(id: mediaFragment.id)
+        self.present(vc, animated: true, completion: nil)
+    }
 }
