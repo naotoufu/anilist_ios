@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  MediaCollectionViewController.swift
 //  Anilist
 //
 //  Created by NaotoIto on 2018/10/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class MediaCollectionViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -31,7 +31,7 @@ class SecondViewController: UIViewController {
 
 }
 
-extension SecondViewController : UICollectionViewDataSource {
+extension MediaCollectionViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return mediaSearchModel.pageDataSet.first?.media?.count ?? 0
     }

@@ -27,5 +27,19 @@ fragment MediaListFragment on Media {
         medium
     }
     bannerImage
+    # genres
+    # season
+    # episodes
+    # duration
+    # isLicensed
+    # source
+    # hashtag
+    # averageScore
+    # meanScore
+    # popularity
+    # trending
+    # externalLinks
+    # streamingEpisodes
+    # siteUrl
 }
 

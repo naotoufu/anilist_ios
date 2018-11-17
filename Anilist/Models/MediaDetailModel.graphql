@@ -19,4 +19,21 @@ fragment MediaDetailFragment on Media {
         medium
     }
     bannerImage
+    staff {
+        edges {
+            node {
+                id
+            }
+            id
+        }
+    }
+    relations {
+        edges {
+            node {
+                id
+            }
+            id
+        }
+    }
+    description(asHtml: false)
 }

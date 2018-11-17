@@ -18,6 +18,16 @@ class ImageCollectionViewCell: UICollectionViewCell {
         layer.cornerRadius = 4.0
     }
     
+//    init(imageUrlString: String, complition: @escaping ()->Void) {
+//        super.init(frame: .zero)
+//        guard let url = URL(string: imageUrlString) else {return}
+//        self.imageView.load(url: url, complition: complition)
+//    }
+    
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+//
     func configure(imageUrlString: String, complition: @escaping ()->Void) {
         guard let url = URL(string: imageUrlString) else {return}
         self.imageView.load(url: url, complition: complition)

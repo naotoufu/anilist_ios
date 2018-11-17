@@ -13,11 +13,13 @@ struct MediaDetailViewFragment {
     var title : MediaTitle
     var coverImage : MediaCoverImage
     var bannerImage : String
+    var description : String
     
     init(fragment: MediaDetailFragment?) {
         self.id = fragment?.id ?? Int.max
         self.title = MediaTitle(title: fragment?.title)
         self.coverImage = MediaCoverImage(coverImage: fragment?.coverImage)
         self.bannerImage = fragment?.bannerImage ?? ""
+        self.description = fragment?.description ?? ""
     }
 }

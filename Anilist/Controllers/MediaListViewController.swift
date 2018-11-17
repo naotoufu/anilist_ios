@@ -16,6 +16,7 @@ class MediaListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UINib(nibName: "\(MediaListTableViewCell.self)", bundle: nil), forCellReuseIdentifier: MediaListTableViewCell.identifier)
         tableView.tableFooterView = UINib(nibName: "\(LoadingFooterView.self)", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! LoadingFooterView
         tableView.delegate = self
         tableView.dataSource = self
@@ -39,17 +40,13 @@ extension MediaListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard presenter.mediaFragments.count > 0 else {return UITableViewCell()}
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MediaListTableViewCell.identifier, for: indexPath) as? MediaListTableViewCell else {return UITableViewCell()}
         let mediaFragmemnt = presenter.mediaFragments[indexPath.row]
-        cell.textLabel?.text = mediaFragmemnt.title.native
         let urlString = mediaFragmemnt.coverImage.medium
         guard let url = URL(string: urlString) else {return cell}
-        // place holder
-        cell.imageView?.image = UIImage(color: .white,size: CGSize(width: cell.frame.size.height, height: cell.frame.size.height))
-        // image load async
-        cell.imageView?.load(url: url) {
-            cell.setNeedsLayout()
-        }
+        cell.configure(title: mediaFragmemnt.title.native, text: "", url: url, complition: { [weak cell] in
+            cell?.setNeedsLayout()
+        })
         return cell
     }
 
@@ -67,7 +64,7 @@ extension MediaListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard presenter.mediaFragments.count > 0 else {return}
         let mediaFragment = presenter.mediaFragments[indexPath.row]
-        let vc = MediaDetailViewController.instance(id: mediaFragment.id)
+        let vc = MediaDetailViewController(id: mediaFragment.id)
         self.present(vc, animated: true, completion: nil)
     }
 }
