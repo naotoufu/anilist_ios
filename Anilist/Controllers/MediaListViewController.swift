@@ -44,7 +44,7 @@ extension MediaListViewController: UITableViewDataSource {
         let mediaFragmemnt = presenter.mediaFragments[indexPath.row]
         let urlString = mediaFragmemnt.coverImage.medium
         guard let url = URL(string: urlString) else {return cell}
-        cell.configure(title: mediaFragmemnt.title.native, text: "", url: url, complition: { [weak cell] in
+        cell.configure(title: mediaFragmemnt.title.native, text: mediaFragmemnt.description, url: url, complition: { [weak cell] in
             cell?.setNeedsLayout()
         })
         return cell

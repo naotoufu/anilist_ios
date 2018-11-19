@@ -48,6 +48,15 @@
 		5C955CFD2191CDF8005A0EB1 /* UIImage+Colorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CFC2191CDF7005A0EB1 /* UIImage+Colorize.swift */; };
 		5C955D002191D748005A0EB1 /* MediaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CFE2191D748005A0EB1 /* MediaDetailViewController.swift */; };
 		5C955D012191D748005A0EB1 /* MediaDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C955CFF2191D748005A0EB1 /* MediaDetailViewController.xib */; };
+		5CE3B1AD21A2EED8000003CB /* Linearicons-Free.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B1AC21A2EED8000003CB /* Linearicons-Free.ttf */; };
+		5CE3B1AE21A2EED8000003CB /* Linearicons-Free.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B1AC21A2EED8000003CB /* Linearicons-Free.ttf */; };
+		5CE3B1AF21A2EED8000003CB /* Linearicons-Free.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B1AC21A2EED8000003CB /* Linearicons-Free.ttf */; };
+		5CE3B1B121A2F55D000003CB /* IconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1B021A2F55D000003CB /* IconFont.swift */; };
+		5CE3B1B221A2F55D000003CB /* IconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1B021A2F55D000003CB /* IconFont.swift */; };
+		5CE3B1B321A2F55D000003CB /* IconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1B021A2F55D000003CB /* IconFont.swift */; };
+		5CE3B1B521A2F78E000003CB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1B421A2F78E000003CB /* TabBarViewController.swift */; };
+		5CE3B1B621A2F78E000003CB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1B421A2F78E000003CB /* TabBarViewController.swift */; };
+		5CE3B1B721A2F78E000003CB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1B421A2F78E000003CB /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +123,9 @@
 		5C955CFC2191CDF7005A0EB1 /* UIImage+Colorize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Colorize.swift"; sourceTree = "<group>"; };
 		5C955CFE2191D748005A0EB1 /* MediaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailViewController.swift; sourceTree = "<group>"; };
 		5C955CFF2191D748005A0EB1 /* MediaDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaDetailViewController.xib; sourceTree = "<group>"; };
+		5CE3B1AC21A2EED8000003CB /* Linearicons-Free.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Linearicons-Free.ttf"; sourceTree = "<group>"; };
+		5CE3B1B021A2F55D000003CB /* IconFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconFont.swift; sourceTree = "<group>"; };
+		5CE3B1B421A2F78E000003CB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		5CFB2BD8218212920088BD65 /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apollo.framework; path = Carthage/Build/iOS/Apollo.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +181,7 @@
 			children = (
 				5C1CEFC421982B8E00F73CFD /* Presenter */,
 				5C09D2DE217C85D1006122AE /* Info.plist */,
+				5CE3B1AB21A2EEAF000003CB /* fonts */,
 				5C61B2492183706E0056A025 /* API.swift */,
 				5C09D2D0217C85D0006122AE /* AppDelegate.swift */,
 				5C61B24C218451310056A025 /* GraphAPIClient.swift */,
@@ -179,6 +192,7 @@
 				5C955CDE218EC87F005A0EB1 /* Controllers */,
 				5C09D2DB217C85D1006122AE /* LaunchScreen.storyboard */,
 				5C09D2D6217C85D0006122AE /* Main.storyboard */,
+				5CE3B1B421A2F78E000003CB /* TabBarViewController.swift */,
 				5C955CDF218EC893005A0EB1 /* Models */,
 				5C955CDD218EC86C005A0EB1 /* Views */,
 			);
@@ -227,12 +241,9 @@
 			isa = PBXGroup;
 			children = (
 				5C1CEFD121986FBC00F73CFD /* MediaDetail */,
-				5C955CD9218EC2B0005A0EB1 /* ImageCollectionViewCell.swift */,
-				5C955CDA218EC2B0005A0EB1 /* ImageCollectionViewCell.xib */,
-				5C1CEFD62199AB9900F73CFD /* MediaListTableViewCell.swift */,
-				5C1CEFD72199AB9900F73CFD /* MediaListTableViewCell.xib */,
-				5C955CE0218F3A69005A0EB1 /* LoadingFooterView.swift */,
-				5C955CE4218F3ACF005A0EB1 /* LoadingFooterView.xib */,
+				5CE3B1A821A05C8A000003CB /* MediaList */,
+				5CE3B1AA21A05CB2000003CB /* MediaCollection */,
+				5CE3B1A921A05C9D000003CB /* Common */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -263,12 +274,12 @@
 		5C955CE821907D22005A0EB1 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				5C955CD7218EB845005A0EB1 /* PageInfo.swift */,
-				5C955CE921907D3D005A0EB1 /* Media.swift */,
-				5C955CEE21907EC0005A0EB1 /* MediaTitle.swift */,
-				5C955CF821908247005A0EB1 /* MediaCoverImage.swift */,
-				5C955CFA219082F9005A0EB1 /* FuzzyDate.swift */,
 				5C955CEB21907D62005A0EB1 /* Fragment */,
+				5C955CFA219082F9005A0EB1 /* FuzzyDate.swift */,
+				5C955CE921907D3D005A0EB1 /* Media.swift */,
+				5C955CF821908247005A0EB1 /* MediaCoverImage.swift */,
+				5C955CEE21907EC0005A0EB1 /* MediaTitle.swift */,
+				5C955CD7218EB845005A0EB1 /* PageInfo.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -290,6 +301,42 @@
 				5C955CF621908159005A0EB1 /* MediaStatus.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		5CE3B1A821A05C8A000003CB /* MediaList */ = {
+			isa = PBXGroup;
+			children = (
+				5C1CEFD62199AB9900F73CFD /* MediaListTableViewCell.swift */,
+				5C1CEFD72199AB9900F73CFD /* MediaListTableViewCell.xib */,
+			);
+			path = MediaList;
+			sourceTree = "<group>";
+		};
+		5CE3B1A921A05C9D000003CB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5C955CE0218F3A69005A0EB1 /* LoadingFooterView.swift */,
+				5C955CE4218F3ACF005A0EB1 /* LoadingFooterView.xib */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5CE3B1AA21A05CB2000003CB /* MediaCollection */ = {
+			isa = PBXGroup;
+			children = (
+				5C955CD9218EC2B0005A0EB1 /* ImageCollectionViewCell.swift */,
+				5C955CDA218EC2B0005A0EB1 /* ImageCollectionViewCell.xib */,
+			);
+			path = MediaCollection;
+			sourceTree = "<group>";
+		};
+		5CE3B1AB21A2EEAF000003CB /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5CE3B1AC21A2EED8000003CB /* Linearicons-Free.ttf */,
+				5CE3B1B021A2F55D000003CB /* IconFont.swift */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		5CFB2BD7218212920088BD65 /* Frameworks */ = {
@@ -412,6 +459,7 @@
 				5C09D2DD217C85D1006122AE /* LaunchScreen.storyboard in Resources */,
 				5C1CEFC82198309C00F73CFD /* MediaDetailModel.graphql in Resources */,
 				5C09D2DA217C85D1006122AE /* Assets.xcassets in Resources */,
+				5CE3B1AD21A2EED8000003CB /* Linearicons-Free.ttf in Resources */,
 				5C09D2D8217C85D0006122AE /* Main.storyboard in Resources */,
 				5C955CE5218F3ACF005A0EB1 /* LoadingFooterView.xib in Resources */,
 				5C61B2442183678B0056A025 /* MediaSearchModel.graphql in Resources */,
@@ -424,6 +472,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CE3B1AE21A2EED8000003CB /* Linearicons-Free.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +480,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CE3B1AF21A2EED8000003CB /* Linearicons-Free.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +548,8 @@
 				5C955CFB219082F9005A0EB1 /* FuzzyDate.swift in Sources */,
 				5C09D2D3217C85D0006122AE /* MediaListViewController.swift in Sources */,
 				5C1CEFC32197D4F400F73CFD /* MediaDetailPresenter.swift in Sources */,
+				5CE3B1B121A2F55D000003CB /* IconFont.swift in Sources */,
+				5CE3B1B521A2F78E000003CB /* TabBarViewController.swift in Sources */,
 				5C955CFD2191CDF8005A0EB1 /* UIImage+Colorize.swift in Sources */,
 				5C955CF721908159005A0EB1 /* MediaStatus.swift in Sources */,
 				5C955CF921908247005A0EB1 /* MediaCoverImage.swift in Sources */,
@@ -516,6 +568,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C09D2E8217C85D1006122AE /* AnilistTests.swift in Sources */,
+				5CE3B1B621A2F78E000003CB /* TabBarViewController.swift in Sources */,
+				5CE3B1B221A2F55D000003CB /* IconFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +578,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C09D2F3217C85D1006122AE /* AnilistUITests.swift in Sources */,
+				5CE3B1B721A2F78E000003CB /* TabBarViewController.swift in Sources */,
+				5CE3B1B321A2F55D000003CB /* IconFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,14 +32,15 @@ fragment MediaListFragment on Media {
     # episodes
     # duration
     # isLicensed
-    # source
-    # hashtag
-    # averageScore
-    # meanScore
-    # popularity
-    # trending
+    source
+    hashtag
+    averageScore
+    meanScore
+    popularity
+    trending
     # externalLinks
     # streamingEpisodes
-    # siteUrl
+    siteUrl
+    description(asHtml: false)
 }
 
