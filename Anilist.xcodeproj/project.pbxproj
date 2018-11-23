@@ -57,6 +57,77 @@
 		5CE3B1B521A2F78E000003CB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1B421A2F78E000003CB /* TabBarViewController.swift */; };
 		5CE3B1B621A2F78E000003CB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1B421A2F78E000003CB /* TabBarViewController.swift */; };
 		5CE3B1B721A2F78E000003CB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1B421A2F78E000003CB /* TabBarViewController.swift */; };
+		5CE3B1BA21A43526000003CB /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1B821A43526000003CB /* SearchDetailViewController.swift */; };
+		5CE3B1BB21A43526000003CB /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1B821A43526000003CB /* SearchDetailViewController.swift */; };
+		5CE3B1BC21A43526000003CB /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1B821A43526000003CB /* SearchDetailViewController.swift */; };
+		5CE3B1BD21A43526000003CB /* SearchDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B1B921A43526000003CB /* SearchDetailViewController.xib */; };
+		5CE3B1BE21A43526000003CB /* SearchDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B1B921A43526000003CB /* SearchDetailViewController.xib */; };
+		5CE3B1BF21A43526000003CB /* SearchDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B1B921A43526000003CB /* SearchDetailViewController.xib */; };
+		5CE3B1C121A7C1D1000003CB /* SearchDetailTableRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1C021A7C1D1000003CB /* SearchDetailTableRowType.swift */; };
+		5CE3B1C521A7C42A000003CB /* SearchDetailType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1C421A7C42A000003CB /* SearchDetailType.swift */; };
+		5CE3B1CE21A7C6CA000003CB /* SearchDetailYearTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1CC21A7C6CA000003CB /* SearchDetailYearTableViewCell.swift */; };
+		5CE3B1CF21A7C6CA000003CB /* SearchDetailYearTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1CC21A7C6CA000003CB /* SearchDetailYearTableViewCell.swift */; };
+		5CE3B1D021A7C6CA000003CB /* SearchDetailYearTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1CC21A7C6CA000003CB /* SearchDetailYearTableViewCell.swift */; };
+		5CE3B1D121A7C6CA000003CB /* SearchDetailYearTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B1CD21A7C6CA000003CB /* SearchDetailYearTableViewCell.xib */; };
+		5CE3B1D221A7C6CA000003CB /* SearchDetailYearTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B1CD21A7C6CA000003CB /* SearchDetailYearTableViewCell.xib */; };
+		5CE3B1D321A7C6CA000003CB /* SearchDetailYearTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B1CD21A7C6CA000003CB /* SearchDetailYearTableViewCell.xib */; };
+		5CE3B1D621A7D256000003CB /* SearchConditionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1D521A7D256000003CB /* SearchConditionPresenter.swift */; };
+		5CE3B1D721A7D256000003CB /* SearchConditionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1D521A7D256000003CB /* SearchConditionPresenter.swift */; };
+		5CE3B1D821A7D256000003CB /* SearchConditionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B1D521A7D256000003CB /* SearchConditionPresenter.swift */; };
+		5CE3B21721A8203A000003CB /* SearchSelectTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B21521A8203A000003CB /* SearchSelectTypeTableViewController.swift */; };
+		5CE3B21821A8203A000003CB /* SearchSelectTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B21521A8203A000003CB /* SearchSelectTypeTableViewController.swift */; };
+		5CE3B21921A8203A000003CB /* SearchSelectTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B21521A8203A000003CB /* SearchSelectTypeTableViewController.swift */; };
+		5CE3B21A21A8203A000003CB /* SearchSelectTypeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B21621A8203A000003CB /* SearchSelectTypeTableViewController.xib */; };
+		5CE3B21B21A8203A000003CB /* SearchSelectTypeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B21621A8203A000003CB /* SearchSelectTypeTableViewController.xib */; };
+		5CE3B21C21A8203A000003CB /* SearchSelectTypeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B21621A8203A000003CB /* SearchSelectTypeTableViewController.xib */; };
+		5CE3B21F21A82530000003CB /* SearchSelectSeasonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B21D21A82530000003CB /* SearchSelectSeasonTableViewController.swift */; };
+		5CE3B22021A82530000003CB /* SearchSelectSeasonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B21D21A82530000003CB /* SearchSelectSeasonTableViewController.swift */; };
+		5CE3B22121A82530000003CB /* SearchSelectSeasonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B21D21A82530000003CB /* SearchSelectSeasonTableViewController.swift */; };
+		5CE3B22221A82530000003CB /* SearchSelectSeasonTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B21E21A82530000003CB /* SearchSelectSeasonTableViewController.xib */; };
+		5CE3B22321A82530000003CB /* SearchSelectSeasonTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B21E21A82530000003CB /* SearchSelectSeasonTableViewController.xib */; };
+		5CE3B22421A82530000003CB /* SearchSelectSeasonTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B21E21A82530000003CB /* SearchSelectSeasonTableViewController.xib */; };
+		5CE3B22621A825BF000003CB /* SearchDetailSeasonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B22521A825BF000003CB /* SearchDetailSeasonType.swift */; };
+		5CE3B22721A825BF000003CB /* SearchDetailSeasonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B22521A825BF000003CB /* SearchDetailSeasonType.swift */; };
+		5CE3B22821A825BF000003CB /* SearchDetailSeasonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B22521A825BF000003CB /* SearchDetailSeasonType.swift */; };
+		5CE3B22A21A82C59000003CB /* SearchDecisionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B22921A82C59000003CB /* SearchDecisionButton.swift */; };
+		5CE3B22B21A82C59000003CB /* SearchDecisionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B22921A82C59000003CB /* SearchDecisionButton.swift */; };
+		5CE3B22C21A82C59000003CB /* SearchDecisionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B22921A82C59000003CB /* SearchDecisionButton.swift */; };
+		5CE3B22E21A8397E000003CB /* SearchDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B22D21A8397E000003CB /* SearchDoneButton.swift */; };
+		5CE3B22F21A8397E000003CB /* SearchDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B22D21A8397E000003CB /* SearchDoneButton.swift */; };
+		5CE3B23021A8397E000003CB /* SearchDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B22D21A8397E000003CB /* SearchDoneButton.swift */; };
+		5CE3B23321A83F3E000003CB /* SearchBottomToolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B23121A83F3E000003CB /* SearchBottomToolViewController.swift */; };
+		5CE3B23421A83F3E000003CB /* SearchBottomToolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B23121A83F3E000003CB /* SearchBottomToolViewController.swift */; };
+		5CE3B23521A83F3E000003CB /* SearchBottomToolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B23121A83F3E000003CB /* SearchBottomToolViewController.swift */; };
+		5CE3B23621A83F3E000003CB /* SearchBottomToolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B23221A83F3E000003CB /* SearchBottomToolViewController.xib */; };
+		5CE3B23721A83F3E000003CB /* SearchBottomToolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B23221A83F3E000003CB /* SearchBottomToolViewController.xib */; };
+		5CE3B23821A83F3E000003CB /* SearchBottomToolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B23221A83F3E000003CB /* SearchBottomToolViewController.xib */; };
+		5CE3B24321A846B8000003CB /* SearchSelectSeasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B24121A846B7000003CB /* SearchSelectSeasonViewController.swift */; };
+		5CE3B24421A846B8000003CB /* SearchSelectSeasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B24121A846B7000003CB /* SearchSelectSeasonViewController.swift */; };
+		5CE3B24521A846B8000003CB /* SearchSelectSeasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B24121A846B7000003CB /* SearchSelectSeasonViewController.swift */; };
+		5CE3B24621A846B8000003CB /* SearchSelectSeasonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B24221A846B8000003CB /* SearchSelectSeasonViewController.xib */; };
+		5CE3B24721A846B8000003CB /* SearchSelectSeasonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B24221A846B8000003CB /* SearchSelectSeasonViewController.xib */; };
+		5CE3B24821A846B8000003CB /* SearchSelectSeasonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B24221A846B8000003CB /* SearchSelectSeasonViewController.xib */; };
+		5CE3B24B21A84C1A000003CB /* SearchSelectViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B24A21A84C1A000003CB /* SearchSelectViewControllerProtocol.swift */; };
+		5CE3B24C21A84C1A000003CB /* SearchSelectViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B24A21A84C1A000003CB /* SearchSelectViewControllerProtocol.swift */; };
+		5CE3B24D21A84C1A000003CB /* SearchSelectViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B24A21A84C1A000003CB /* SearchSelectViewControllerProtocol.swift */; };
+		5CE3B25421A84F15000003CB /* SearchSelectTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B25221A84F15000003CB /* SearchSelectTypeViewController.swift */; };
+		5CE3B25521A84F15000003CB /* SearchSelectTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B25221A84F15000003CB /* SearchSelectTypeViewController.swift */; };
+		5CE3B25621A84F15000003CB /* SearchSelectTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B25221A84F15000003CB /* SearchSelectTypeViewController.swift */; };
+		5CE3B25721A84F15000003CB /* SearchSelectTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B25321A84F15000003CB /* SearchSelectTypeViewController.xib */; };
+		5CE3B25821A84F15000003CB /* SearchSelectTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B25321A84F15000003CB /* SearchSelectTypeViewController.xib */; };
+		5CE3B25921A84F15000003CB /* SearchSelectTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B25321A84F15000003CB /* SearchSelectTypeViewController.xib */; };
+		5CE3B25C21A85205000003CB /* RightDetailStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B25A21A85205000003CB /* RightDetailStyleTableViewCell.swift */; };
+		5CE3B25D21A85205000003CB /* RightDetailStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B25A21A85205000003CB /* RightDetailStyleTableViewCell.swift */; };
+		5CE3B25E21A85205000003CB /* RightDetailStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B25A21A85205000003CB /* RightDetailStyleTableViewCell.swift */; };
+		5CE3B25F21A85205000003CB /* RightDetailStyleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B25B21A85205000003CB /* RightDetailStyleTableViewCell.xib */; };
+		5CE3B26021A85205000003CB /* RightDetailStyleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B25B21A85205000003CB /* RightDetailStyleTableViewCell.xib */; };
+		5CE3B26121A85205000003CB /* RightDetailStyleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B25B21A85205000003CB /* RightDetailStyleTableViewCell.xib */; };
+		5CE3B26321A8544B000003CB /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B26221A8544B000003CB /* FilterButton.swift */; };
+		5CE3B26421A8544B000003CB /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B26221A8544B000003CB /* FilterButton.swift */; };
+		5CE3B26521A8544B000003CB /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B26221A8544B000003CB /* FilterButton.swift */; };
+		5CE3B26721A85526000003CB /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B26621A85525000003CB /* MenuButton.swift */; };
+		5CE3B26821A85526000003CB /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B26621A85525000003CB /* MenuButton.swift */; };
+		5CE3B26921A85526000003CB /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3B26621A85525000003CB /* MenuButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +197,32 @@
 		5CE3B1AC21A2EED8000003CB /* Linearicons-Free.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Linearicons-Free.ttf"; sourceTree = "<group>"; };
 		5CE3B1B021A2F55D000003CB /* IconFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconFont.swift; sourceTree = "<group>"; };
 		5CE3B1B421A2F78E000003CB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		5CE3B1B821A43526000003CB /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
+		5CE3B1B921A43526000003CB /* SearchDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchDetailViewController.xib; sourceTree = "<group>"; };
+		5CE3B1C021A7C1D1000003CB /* SearchDetailTableRowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailTableRowType.swift; sourceTree = "<group>"; };
+		5CE3B1C421A7C42A000003CB /* SearchDetailType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailType.swift; sourceTree = "<group>"; };
+		5CE3B1CC21A7C6CA000003CB /* SearchDetailYearTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailYearTableViewCell.swift; sourceTree = "<group>"; };
+		5CE3B1CD21A7C6CA000003CB /* SearchDetailYearTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchDetailYearTableViewCell.xib; sourceTree = "<group>"; };
+		5CE3B1D521A7D256000003CB /* SearchConditionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchConditionPresenter.swift; sourceTree = "<group>"; };
+		5CE3B1DA21A7DD66000003CB /* Calendar.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Calendar.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		5CE3B21521A8203A000003CB /* SearchSelectTypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSelectTypeTableViewController.swift; sourceTree = "<group>"; };
+		5CE3B21621A8203A000003CB /* SearchSelectTypeTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchSelectTypeTableViewController.xib; sourceTree = "<group>"; };
+		5CE3B21D21A82530000003CB /* SearchSelectSeasonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSelectSeasonTableViewController.swift; sourceTree = "<group>"; };
+		5CE3B21E21A82530000003CB /* SearchSelectSeasonTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchSelectSeasonTableViewController.xib; sourceTree = "<group>"; };
+		5CE3B22521A825BF000003CB /* SearchDetailSeasonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailSeasonType.swift; sourceTree = "<group>"; };
+		5CE3B22921A82C59000003CB /* SearchDecisionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDecisionButton.swift; sourceTree = "<group>"; };
+		5CE3B22D21A8397E000003CB /* SearchDoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDoneButton.swift; sourceTree = "<group>"; };
+		5CE3B23121A83F3E000003CB /* SearchBottomToolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBottomToolViewController.swift; sourceTree = "<group>"; };
+		5CE3B23221A83F3E000003CB /* SearchBottomToolViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBottomToolViewController.xib; sourceTree = "<group>"; };
+		5CE3B24121A846B7000003CB /* SearchSelectSeasonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSelectSeasonViewController.swift; sourceTree = "<group>"; };
+		5CE3B24221A846B8000003CB /* SearchSelectSeasonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchSelectSeasonViewController.xib; sourceTree = "<group>"; };
+		5CE3B24A21A84C1A000003CB /* SearchSelectViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSelectViewControllerProtocol.swift; sourceTree = "<group>"; };
+		5CE3B25221A84F15000003CB /* SearchSelectTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSelectTypeViewController.swift; sourceTree = "<group>"; };
+		5CE3B25321A84F15000003CB /* SearchSelectTypeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchSelectTypeViewController.xib; sourceTree = "<group>"; };
+		5CE3B25A21A85205000003CB /* RightDetailStyleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightDetailStyleTableViewCell.swift; sourceTree = "<group>"; };
+		5CE3B25B21A85205000003CB /* RightDetailStyleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightDetailStyleTableViewCell.xib; sourceTree = "<group>"; };
+		5CE3B26221A8544B000003CB /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
+		5CE3B26621A85525000003CB /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		5CFB2BD8218212920088BD65 /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apollo.framework; path = Carthage/Build/iOS/Apollo.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,6 +276,8 @@
 		5C09D2CF217C85D0006122AE /* Anilist */ = {
 			isa = PBXGroup;
 			children = (
+				5CE3B24921A84C08000003CB /* Protocol */,
+				5CE3B1D921A7DD45000003CB /* New Group */,
 				5C1CEFC421982B8E00F73CFD /* Presenter */,
 				5C09D2DE217C85D1006122AE /* Info.plist */,
 				5CE3B1AB21A2EEAF000003CB /* fonts */,
@@ -221,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				5C955CE6218F4158005A0EB1 /* MediaListPresenter.swift */,
+				5CE3B1D521A7D256000003CB /* SearchConditionPresenter.swift */,
 				5C1CEFC22197D4F400F73CFD /* MediaDetailPresenter.swift */,
 			);
 			path = Presenter;
@@ -240,10 +340,17 @@
 		5C955CDD218EC86C005A0EB1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5CE3B1D421A7CBB2000003CB /* SearchDetail */,
 				5C1CEFD121986FBC00F73CFD /* MediaDetail */,
 				5CE3B1A821A05C8A000003CB /* MediaList */,
 				5CE3B1AA21A05CB2000003CB /* MediaCollection */,
 				5CE3B1A921A05C9D000003CB /* Common */,
+				5CE3B22921A82C59000003CB /* SearchDecisionButton.swift */,
+				5CE3B22D21A8397E000003CB /* SearchDoneButton.swift */,
+				5CE3B25A21A85205000003CB /* RightDetailStyleTableViewCell.swift */,
+				5CE3B25B21A85205000003CB /* RightDetailStyleTableViewCell.xib */,
+				5CE3B26221A8544B000003CB /* FilterButton.swift */,
+				5CE3B26621A85525000003CB /* MenuButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,9 +358,21 @@
 		5C955CDE218EC87F005A0EB1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5C09D2D2217C85D0006122AE /* MediaListViewController.swift */,
+				5CE3B21521A8203A000003CB /* SearchSelectTypeTableViewController.swift */,
+				5CE3B21621A8203A000003CB /* SearchSelectTypeTableViewController.xib */,
+				5CE3B21D21A82530000003CB /* SearchSelectSeasonTableViewController.swift */,
+				5CE3B21E21A82530000003CB /* SearchSelectSeasonTableViewController.xib */,
+				5CE3B23121A83F3E000003CB /* SearchBottomToolViewController.swift */,
+				5CE3B23221A83F3E000003CB /* SearchBottomToolViewController.xib */,
+				5CE3B24121A846B7000003CB /* SearchSelectSeasonViewController.swift */,
+				5CE3B24221A846B8000003CB /* SearchSelectSeasonViewController.xib */,
+				5CE3B25221A84F15000003CB /* SearchSelectTypeViewController.swift */,
+				5CE3B25321A84F15000003CB /* SearchSelectTypeViewController.xib */,
+				5CE3B1B821A43526000003CB /* SearchDetailViewController.swift */,
+				5CE3B1B921A43526000003CB /* SearchDetailViewController.xib */,
 				5C955CFE2191D748005A0EB1 /* MediaDetailViewController.swift */,
 				5C955CFF2191D748005A0EB1 /* MediaDetailViewController.xib */,
+				5C09D2D2217C85D0006122AE /* MediaListViewController.swift */,
 				5C09D2D4217C85D0006122AE /* MediaCollectionViewController.swift */,
 			);
 			path = Controllers;
@@ -296,6 +415,9 @@
 		5C955CF121907F47005A0EB1 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				5CE3B1C021A7C1D1000003CB /* SearchDetailTableRowType.swift */,
+				5CE3B1C421A7C42A000003CB /* SearchDetailType.swift */,
+				5CE3B22521A825BF000003CB /* SearchDetailSeasonType.swift */,
 				5C955CF221907F53005A0EB1 /* MediaType.swift */,
 				5C955CF421907FA9005A0EB1 /* MediaFormat.swift */,
 				5C955CF621908159005A0EB1 /* MediaStatus.swift */,
@@ -337,6 +459,31 @@
 				5CE3B1B021A2F55D000003CB /* IconFont.swift */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		5CE3B1D421A7CBB2000003CB /* SearchDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5CE3B1CC21A7C6CA000003CB /* SearchDetailYearTableViewCell.swift */,
+				5CE3B1CD21A7C6CA000003CB /* SearchDetailYearTableViewCell.xib */,
+			);
+			path = SearchDetail;
+			sourceTree = "<group>";
+		};
+		5CE3B1D921A7DD45000003CB /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				5CE3B1DA21A7DD66000003CB /* Calendar.playground */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		5CE3B24921A84C08000003CB /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				5CE3B24A21A84C1A000003CB /* SearchSelectViewControllerProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		5CFB2BD7218212920088BD65 /* Frameworks */ = {
@@ -453,18 +600,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CE3B22221A82530000003CB /* SearchSelectSeasonTableViewController.xib in Resources */,
 				5C1CEFD52198748D00F73CFD /* MediaDetailTableViewHeaderFooterView.xib in Resources */,
 				5C1CEFD92199AB9900F73CFD /* MediaListTableViewCell.xib in Resources */,
 				5C1CEFD0219860D500F73CFD /* MediaDetailStoryTableViewCell.xib in Resources */,
+				5CE3B1D121A7C6CA000003CB /* SearchDetailYearTableViewCell.xib in Resources */,
 				5C09D2DD217C85D1006122AE /* LaunchScreen.storyboard in Resources */,
 				5C1CEFC82198309C00F73CFD /* MediaDetailModel.graphql in Resources */,
 				5C09D2DA217C85D1006122AE /* Assets.xcassets in Resources */,
 				5CE3B1AD21A2EED8000003CB /* Linearicons-Free.ttf in Resources */,
+				5CE3B25F21A85205000003CB /* RightDetailStyleTableViewCell.xib in Resources */,
+				5CE3B25721A84F15000003CB /* SearchSelectTypeViewController.xib in Resources */,
 				5C09D2D8217C85D0006122AE /* Main.storyboard in Resources */,
+				5CE3B23621A83F3E000003CB /* SearchBottomToolViewController.xib in Resources */,
 				5C955CE5218F3ACF005A0EB1 /* LoadingFooterView.xib in Resources */,
+				5CE3B1BD21A43526000003CB /* SearchDetailViewController.xib in Resources */,
 				5C61B2442183678B0056A025 /* MediaSearchModel.graphql in Resources */,
 				5C955D012191D748005A0EB1 /* MediaDetailViewController.xib in Resources */,
+				5CE3B24621A846B8000003CB /* SearchSelectSeasonViewController.xib in Resources */,
 				5C955CDC218EC2B0005A0EB1 /* ImageCollectionViewCell.xib in Resources */,
+				5CE3B21A21A8203A000003CB /* SearchSelectTypeTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +627,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CE3B24721A846B8000003CB /* SearchSelectSeasonViewController.xib in Resources */,
 				5CE3B1AE21A2EED8000003CB /* Linearicons-Free.ttf in Resources */,
+				5CE3B25821A84F15000003CB /* SearchSelectTypeViewController.xib in Resources */,
+				5CE3B26021A85205000003CB /* RightDetailStyleTableViewCell.xib in Resources */,
+				5CE3B1BE21A43526000003CB /* SearchDetailViewController.xib in Resources */,
+				5CE3B1D221A7C6CA000003CB /* SearchDetailYearTableViewCell.xib in Resources */,
+				5CE3B21B21A8203A000003CB /* SearchSelectTypeTableViewController.xib in Resources */,
+				5CE3B22321A82530000003CB /* SearchSelectSeasonTableViewController.xib in Resources */,
+				5CE3B23721A83F3E000003CB /* SearchBottomToolViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +643,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CE3B24821A846B8000003CB /* SearchSelectSeasonViewController.xib in Resources */,
 				5CE3B1AF21A2EED8000003CB /* Linearicons-Free.ttf in Resources */,
+				5CE3B25921A84F15000003CB /* SearchSelectTypeViewController.xib in Resources */,
+				5CE3B26121A85205000003CB /* RightDetailStyleTableViewCell.xib in Resources */,
+				5CE3B1BF21A43526000003CB /* SearchDetailViewController.xib in Resources */,
+				5CE3B1D321A7C6CA000003CB /* SearchDetailYearTableViewCell.xib in Resources */,
+				5CE3B21C21A8203A000003CB /* SearchSelectTypeTableViewController.xib in Resources */,
+				5CE3B22421A82530000003CB /* SearchSelectSeasonTableViewController.xib in Resources */,
+				5CE3B23821A83F3E000003CB /* SearchBottomToolViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,19 +706,30 @@
 				5C1CEFCF219860D500F73CFD /* MediaDetailStoryTableViewCell.swift in Sources */,
 				5C09D2D5217C85D0006122AE /* MediaCollectionViewController.swift in Sources */,
 				5C955CEF21907EC0005A0EB1 /* MediaTitle.swift in Sources */,
+				5CE3B24B21A84C1A000003CB /* SearchSelectViewControllerProtocol.swift in Sources */,
 				5C61B24821836FE20056A025 /* MediaSearchModel.swift in Sources */,
 				5C1CEFC62198306B00F73CFD /* MediaDetailModel.swift in Sources */,
 				5C1CEFD82199AB9900F73CFD /* MediaListTableViewCell.swift in Sources */,
+				5CE3B23321A83F3E000003CB /* SearchBottomToolViewController.swift in Sources */,
 				5C955CEA21907D3D005A0EB1 /* Media.swift in Sources */,
+				5CE3B22621A825BF000003CB /* SearchDetailSeasonType.swift in Sources */,
 				5C955CF521907FA9005A0EB1 /* MediaFormat.swift in Sources */,
+				5CE3B24321A846B8000003CB /* SearchSelectSeasonViewController.swift in Sources */,
 				5C955CED21907D98005A0EB1 /* MediaListViewFragment.swift in Sources */,
+				5CE3B22A21A82C59000003CB /* SearchDecisionButton.swift in Sources */,
 				5C61B24D218451310056A025 /* GraphAPIClient.swift in Sources */,
 				5C1CEFD32198747E00F73CFD /* MediaDetailTableViewHeaderFooterView.swift in Sources */,
+				5CE3B21F21A82530000003CB /* SearchSelectSeasonTableViewController.swift in Sources */,
 				5C09D2D1217C85D0006122AE /* AppDelegate.swift in Sources */,
+				5CE3B1CE21A7C6CA000003CB /* SearchDetailYearTableViewCell.swift in Sources */,
+				5CE3B26721A85526000003CB /* MenuButton.swift in Sources */,
 				5C955CD8218EB845005A0EB1 /* PageInfo.swift in Sources */,
 				5C955CFB219082F9005A0EB1 /* FuzzyDate.swift in Sources */,
 				5C09D2D3217C85D0006122AE /* MediaListViewController.swift in Sources */,
+				5CE3B25C21A85205000003CB /* RightDetailStyleTableViewCell.swift in Sources */,
+				5CE3B1BA21A43526000003CB /* SearchDetailViewController.swift in Sources */,
 				5C1CEFC32197D4F400F73CFD /* MediaDetailPresenter.swift in Sources */,
+				5CE3B1C121A7C1D1000003CB /* SearchDetailTableRowType.swift in Sources */,
 				5CE3B1B121A2F55D000003CB /* IconFont.swift in Sources */,
 				5CE3B1B521A2F78E000003CB /* TabBarViewController.swift in Sources */,
 				5C955CFD2191CDF8005A0EB1 /* UIImage+Colorize.swift in Sources */,
@@ -555,11 +737,17 @@
 				5C955CF921908247005A0EB1 /* MediaCoverImage.swift in Sources */,
 				5C955CDB218EC2B0005A0EB1 /* ImageCollectionViewCell.swift in Sources */,
 				5C61B24A2183706E0056A025 /* API.swift in Sources */,
+				5CE3B25421A84F15000003CB /* SearchSelectTypeViewController.swift in Sources */,
 				5C1CEFCA2198322000F73CFD /* MediaDetailViewFragment.swift in Sources */,
 				5C955CE1218F3A69005A0EB1 /* LoadingFooterView.swift in Sources */,
+				5CE3B26321A8544B000003CB /* FilterButton.swift in Sources */,
+				5CE3B1C521A7C42A000003CB /* SearchDetailType.swift in Sources */,
 				5C955CE7218F4158005A0EB1 /* MediaListPresenter.swift in Sources */,
 				5C955CD2218B45DE005A0EB1 /* Utilites.swift in Sources */,
+				5CE3B21721A8203A000003CB /* SearchSelectTypeTableViewController.swift in Sources */,
+				5CE3B1D621A7D256000003CB /* SearchConditionPresenter.swift in Sources */,
 				5C955D002191D748005A0EB1 /* MediaDetailViewController.swift in Sources */,
+				5CE3B22E21A8397E000003CB /* SearchDoneButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,9 +755,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CE3B22721A825BF000003CB /* SearchDetailSeasonType.swift in Sources */,
+				5CE3B25521A84F15000003CB /* SearchSelectTypeViewController.swift in Sources */,
+				5CE3B22B21A82C59000003CB /* SearchDecisionButton.swift in Sources */,
 				5C09D2E8217C85D1006122AE /* AnilistTests.swift in Sources */,
 				5CE3B1B621A2F78E000003CB /* TabBarViewController.swift in Sources */,
+				5CE3B24C21A84C1A000003CB /* SearchSelectViewControllerProtocol.swift in Sources */,
+				5CE3B24421A846B8000003CB /* SearchSelectSeasonViewController.swift in Sources */,
+				5CE3B1CF21A7C6CA000003CB /* SearchDetailYearTableViewCell.swift in Sources */,
+				5CE3B26421A8544B000003CB /* FilterButton.swift in Sources */,
+				5CE3B22F21A8397E000003CB /* SearchDoneButton.swift in Sources */,
+				5CE3B1BB21A43526000003CB /* SearchDetailViewController.swift in Sources */,
+				5CE3B22021A82530000003CB /* SearchSelectSeasonTableViewController.swift in Sources */,
+				5CE3B25D21A85205000003CB /* RightDetailStyleTableViewCell.swift in Sources */,
+				5CE3B21821A8203A000003CB /* SearchSelectTypeTableViewController.swift in Sources */,
+				5CE3B1D721A7D256000003CB /* SearchConditionPresenter.swift in Sources */,
 				5CE3B1B221A2F55D000003CB /* IconFont.swift in Sources */,
+				5CE3B26821A85526000003CB /* MenuButton.swift in Sources */,
+				5CE3B23421A83F3E000003CB /* SearchBottomToolViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,9 +780,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CE3B22821A825BF000003CB /* SearchDetailSeasonType.swift in Sources */,
+				5CE3B25621A84F15000003CB /* SearchSelectTypeViewController.swift in Sources */,
+				5CE3B22C21A82C59000003CB /* SearchDecisionButton.swift in Sources */,
 				5C09D2F3217C85D1006122AE /* AnilistUITests.swift in Sources */,
 				5CE3B1B721A2F78E000003CB /* TabBarViewController.swift in Sources */,
+				5CE3B24D21A84C1A000003CB /* SearchSelectViewControllerProtocol.swift in Sources */,
+				5CE3B24521A846B8000003CB /* SearchSelectSeasonViewController.swift in Sources */,
+				5CE3B1D021A7C6CA000003CB /* SearchDetailYearTableViewCell.swift in Sources */,
+				5CE3B26521A8544B000003CB /* FilterButton.swift in Sources */,
+				5CE3B23021A8397E000003CB /* SearchDoneButton.swift in Sources */,
+				5CE3B1BC21A43526000003CB /* SearchDetailViewController.swift in Sources */,
+				5CE3B22121A82530000003CB /* SearchSelectSeasonTableViewController.swift in Sources */,
+				5CE3B25E21A85205000003CB /* RightDetailStyleTableViewCell.swift in Sources */,
+				5CE3B21921A8203A000003CB /* SearchSelectTypeTableViewController.swift in Sources */,
+				5CE3B1D821A7D256000003CB /* SearchConditionPresenter.swift in Sources */,
 				5CE3B1B321A2F55D000003CB /* IconFont.swift in Sources */,
+				5CE3B26921A85526000003CB /* MenuButton.swift in Sources */,
+				5CE3B23521A83F3E000003CB /* SearchBottomToolViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

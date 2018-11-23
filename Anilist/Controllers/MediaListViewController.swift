@@ -13,6 +13,13 @@ class MediaListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     lazy var presenter : MediaListPresenter = MediaListPresenter(viewController: self)
+    let scpresenter = SearchConditionPresenter(type: .anime, year: nil, season: nil)
+    
+    @IBAction func tappedFilterButton(_ sender: UIButton) {
+        let vc = SearchDetailViewController(scpresenter: scpresenter)
+        let nav = UINavigationController(rootViewController: vc)
+        present(nav, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +28,7 @@ class MediaListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        presenter.fetch(seasonYear: 2018, season: .spring) { [weak self] in
+        presenter.fetch(seasonYear: scpresenter.year, season: scpresenter.season) { [weak self] in
             self?.tableView.reloadData()
         }
         // Do any additional setup after loading the view, typically from a nib.

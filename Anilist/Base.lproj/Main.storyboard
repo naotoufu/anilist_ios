@@ -40,12 +40,44 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Os1-DX-gdh">
+                                <rect key="frame" x="94" y="574" width="187.5" height="44"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="SJu-yF-xZr">
+                                        <rect key="frame" x="0.0" y="4" width="187.5" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uF9-Dc-kzb" customClass="MenuButton" customModule="Anilist" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="36"/>
+                                                <state key="normal" title="MENU"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="953-zH-JGZ" customClass="FilterButton" customModule="Anilist" customModuleProvider="target">
+                                                <rect key="frame" x="95.5" y="0.0" width="92" height="36"/>
+                                                <state key="normal" title="FILTER"/>
+                                                <connections>
+                                                    <action selector="tappedFilterButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="KmH-bD-B09"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8pb-L7-jj4"/>
+                                    <constraint firstAttribute="bottom" secondItem="SJu-yF-xZr" secondAttribute="bottom" constant="4" id="Dru-52-JFh"/>
+                                    <constraint firstItem="SJu-yF-xZr" firstAttribute="top" secondItem="Os1-DX-gdh" secondAttribute="top" constant="4" id="PU3-xv-Xa8"/>
+                                    <constraint firstItem="SJu-yF-xZr" firstAttribute="leading" secondItem="Os1-DX-gdh" secondAttribute="leading" id="dbB-dh-Llz"/>
+                                    <constraint firstAttribute="trailing" secondItem="SJu-yF-xZr" secondAttribute="trailing" id="ku1-gy-gRG"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tAU-s1-suv" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="4UK-gs-lIc"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="tAU-s1-suv" secondAttribute="trailing" id="7RF-Lk-gmU"/>
+                            <constraint firstItem="Os1-DX-gdh" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="PPj-xa-1Co"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="tAU-s1-suv" secondAttribute="bottom" id="VRP-2E-gSO"/>
+                            <constraint firstItem="Os1-DX-gdh" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="1/2" id="Xzx-0t-jjN"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="Os1-DX-gdh" secondAttribute="bottom" id="l57-hF-i5c"/>
                             <constraint firstItem="tAU-s1-suv" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="wOu-hz-bBE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
