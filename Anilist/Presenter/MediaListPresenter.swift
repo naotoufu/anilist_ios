@@ -27,8 +27,8 @@ class MediaListPresenter: NSObject {
             guard let `self` = self else {return}
             guard let media = pageData.media else {return}
             self.hasNextPage = pageInfo.hasNextPage
-            self.totalMediaFragments += pageInfo.hasNextPage ? pageInfo.perPage : pageInfo.total
-            self.mediaFragments += media.compactMap({MediaListViewFragment(fragment: $0?.fragments.mediaListFragment)})
+            self.totalMediaFragments = pageInfo.hasNextPage ? pageInfo.perPage : pageInfo.total
+            self.mediaFragments = media.compactMap({MediaListViewFragment(fragment: $0?.fragments.mediaListFragment)})
 //            self.viewController.tableView.reloadData()
             complition()
         }

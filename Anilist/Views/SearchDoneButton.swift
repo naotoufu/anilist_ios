@@ -9,6 +9,8 @@
 import UIKit
 
 class SearchDoneButton: UIButton {
+    weak var delegate : SearchDoneButtonDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -29,5 +31,10 @@ class SearchDoneButton: UIButton {
         
         backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         setTitle("Done", for: .normal)
+        addTarget(self, action: #selector(self.didTappedButton(_:)), for: .touchUpInside)
+    }
+    
+    @objc func didTappedButton(_ button: UIButton) {
+        delegate?.didDone(button)
     }
 }

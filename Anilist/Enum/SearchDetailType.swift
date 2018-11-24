@@ -23,7 +23,7 @@ enum SearchDetailType: Int , CaseIterable {
         case .studio:
             return "STUDIO"
         case .charactors:
-            return  "CHARACTORS"
+            return "CHARACTORS"
         case .staff:
             return "STAFF"
         }

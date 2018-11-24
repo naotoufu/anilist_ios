@@ -8,12 +8,14 @@
 
 import UIKit
 
-class SearchSelectSeasonTableViewController: UITableViewController {
-        
+class SearchSelectSeasonTableViewController: UITableViewController,SearchSelectTableViewControllerProtocol {
+     typealias AssociatedType = SearchSelectSeasonViewController
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "\(UITableViewCell.self)")
-        tableView.allowsMultipleSelection = true
+//        tableView.allowsMultipleSelection = true
+        tableView.allowsSelection = true
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -45,8 +47,10 @@ class SearchSelectSeasonTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        guard let type = SearchDetailType(rawValue: indexPath.row) else {return}
+        guard let type = SearchDetailSeasonType(rawValue: indexPath.row) else {return}
+
         let cell = tableView.cellForRow(at: indexPath)
+        scpresenter.season = type.mediaSeason
         cell?.accessoryType = .checkmark
     }
     

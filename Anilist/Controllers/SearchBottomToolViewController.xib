@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchBottomToolViewController" customModule="Anilist" customModuleProvider="target">
             <connections>
                 <outlet property="doneButton" destination="qpc-uC-0Wh" id="cEL-0k-hPk"/>
+                <outlet property="searchButton" destination="Mny-Iv-Red" id="j7v-to-hbn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

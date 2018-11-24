@@ -34,7 +34,19 @@ class MediaSearchModel: NSObject {
 
     
     func fetch(page: Int = 1, seasonYear: Int, season:MediaSeason?, complition: @escaping (PageData, PageInfo)->Void) {
-        apollo.fetch(query: MediaSearchQuery(page: page, seasonYear: seasonYear)) { [weak self] (result, error)
+        apollo.fetch(query: MediaSearchQuery(page: page, seasonYear: seasonYear, season: season)) { [weak self] (result, error)
+            in
+            guard let `self` = self else { return }
+            if let _ = error {return}
+            guard let pageData = result?.data?.page else {return}
+            self.pageDataSet = [pageData]
+            complition(pageData, self.pageInfo)
+        }
+    }
+    
+    func nextPageFetch(seasonYear: Int, season:MediaSeason?, complition: @escaping (PageData, PageInfo)->Void) {
+        self.currentPage += 1
+        apollo.fetch(query: MediaSearchQuery(page: currentPage, seasonYear: seasonYear, season: season)) { [weak self] (result, error)
             in
             guard let `self` = self else { return }
             if let _ = error {return}
@@ -42,10 +54,5 @@ class MediaSearchModel: NSObject {
             self.pageDataSet.append(pageData)
             complition(pageData, self.pageInfo)
         }
-    }
-    
-    func nextPageFetch(seasonYear: Int, season:MediaSeason?, complition: @escaping (PageData, PageInfo)->Void) {
-        self.currentPage += 1
-        self.fetch(page: self.currentPage, seasonYear: seasonYear, season:season, complition: complition)
     }
 }

@@ -87,14 +87,24 @@ extension SearchDetailViewController : UITableViewDataSource {
             cell.selectionStyle = .none
             cell.titleLabel.text = sectionType.string
             return cell
-        default:
+        case .type:
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(RightDetailStyleTableViewCell.self)", for: indexPath) as! RightDetailStyleTableViewCell
-            cell.detailTextLabel?.text = "No Select"
+            cell.detailTextLabel?.text = scpresenter.type.string
             cell.selectionStyle = .none
             cell.accessoryType = .disclosureIndicator
             cell.textLabel?.text = sectionType.string
             return cell
+        case .season:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "\(RightDetailStyleTableViewCell.self)", for: indexPath) as! RightDetailStyleTableViewCell
+            cell.detailTextLabel?.text = scpresenter.season?.rawValue ?? "No Select"
+            cell.selectionStyle = .none
+            cell.accessoryType = .disclosureIndicator
+            cell.textLabel?.text = sectionType.string
+            return cell
+        case .filter: break
+        case .advance: break
         }
+        return UITableViewCell()
     }
     
 }

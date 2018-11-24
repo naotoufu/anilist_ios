@@ -7,7 +7,7 @@ query MediaSearch($page: Int!, $seasonYear: Int!, $season: MediaSeason) {
             lastPage
             hasNextPage
         }
-        media(season: $season,seasonYear: $seasonYear) {
+        media(seasonYear: $seasonYear,season: $season) {
             ...MediaListFragment
         }
     }

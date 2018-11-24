@@ -12,6 +12,19 @@ class MediaListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    lazy var refreser: UIRefreshControl = {
+        let ref = UIRefreshControl()
+        ref.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        ref.tintColor = .gray
+        ref.addTarget(self, action: #selector(self.reloadTableView), for: .valueChanged)
+        return ref
+    }()
+    
+    @objc func reloadTableView() {
+        self.tableView.reloadData()
+        refreser.endRefreshing()
+    }
+    
     lazy var presenter : MediaListPresenter = MediaListPresenter(viewController: self)
     let scpresenter = SearchConditionPresenter(type: .anime, year: nil, season: nil)
     
@@ -23,6 +36,8 @@ class MediaListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.addSubview(refreser)
+        
         tableView.register(UINib(nibName: "\(MediaListTableViewCell.self)", bundle: nil), forCellReuseIdentifier: MediaListTableViewCell.identifier)
         tableView.tableFooterView = UINib(nibName: "\(LoadingFooterView.self)", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! LoadingFooterView
         tableView.delegate = self

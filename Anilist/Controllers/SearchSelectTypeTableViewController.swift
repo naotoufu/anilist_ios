@@ -8,15 +8,9 @@
 
 import UIKit
 
-class SearchSelectTypeTableViewController: UITableViewController {
+class SearchSelectTypeTableViewController: UITableViewController,SearchSelectTableViewControllerProtocol {
+    typealias AssociatedType = SearchSelectTypeViewController
     
-    var searchSelectViewController : SearchSelectViewControllerProtocol! {
-        return self.parent as? SearchSelectViewControllerProtocol
-    }
-    var scpresenter : SearchConditionPresenter! {
-        return searchSelectViewController.scpresenter
-    }
-        
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "\(UITableViewCell.self)")

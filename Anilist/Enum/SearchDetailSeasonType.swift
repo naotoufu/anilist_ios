@@ -29,5 +29,18 @@ enum SearchDetailSeasonType: Int, CaseIterable {
             return "FALL"
         }
     }
+    
+    var mediaSeason : MediaSeason {
+        switch self {
+        case .winter:
+            return .winter
+        case .spring:
+            return .spring
+        case .summer:
+            return .summer
+        case .fall:
+            return .fall
+        }
+    }
 
 }

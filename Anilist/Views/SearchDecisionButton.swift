@@ -9,6 +9,8 @@
 import UIKit
 
 class SearchDecisionButton: UIButton {
+    weak var delegate : SearchDecisionButtonDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -29,5 +31,12 @@ class SearchDecisionButton: UIButton {
         backgroundColor = #colorLiteral(red: 0, green: 0.4793452024, blue: 0.9990863204, alpha: 1)
         setTitle("SEARCH", for: .normal)
         setTitleColor(.white, for: .normal)
+        
+        addTarget(self, action: #selector(self.didTappedButton(_:)), for: .touchUpInside)
+    }
+    
+    @objc func didTappedButton(_ button: UIButton) {
+        delegate?.didDecised(button)
     }
 }
+
