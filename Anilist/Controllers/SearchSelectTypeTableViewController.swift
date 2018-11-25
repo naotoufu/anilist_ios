@@ -42,6 +42,12 @@ class SearchSelectTypeTableViewController: UITableViewController,SearchSelectTab
         // Configure the cell...
         cell.selectionStyle = .none
         cell.textLabel?.text = type.string
+        
+        // default checkmark
+        if type == scpresenter.type {
+            cell.accessoryType = .checkmark
+            tableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+        }
         return cell
     }
     

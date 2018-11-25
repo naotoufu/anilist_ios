@@ -84,21 +84,19 @@ extension SearchDetailViewController : UITableViewDataSource {
         switch sectionType {
         case .year:
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(SearchDetailYearTableViewCell.self)", for: indexPath) as! SearchDetailYearTableViewCell
-            cell.selectionStyle = .none
+            cell.slider.value = Float(scpresenter.year)
             cell.titleLabel.text = sectionType.string
+            cell.yearLabel.text = "\(scpresenter.year!)"
+            cell.delegate = self
             return cell
         case .type:
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(RightDetailStyleTableViewCell.self)", for: indexPath) as! RightDetailStyleTableViewCell
             cell.detailTextLabel?.text = scpresenter.type.string
-            cell.selectionStyle = .none
-            cell.accessoryType = .disclosureIndicator
             cell.textLabel?.text = sectionType.string
             return cell
         case .season:
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(RightDetailStyleTableViewCell.self)", for: indexPath) as! RightDetailStyleTableViewCell
             cell.detailTextLabel?.text = scpresenter.season?.rawValue ?? "No Select"
-            cell.selectionStyle = .none
-            cell.accessoryType = .disclosureIndicator
             cell.textLabel?.text = sectionType.string
             return cell
         case .filter: break
@@ -122,5 +120,13 @@ extension SearchDetailViewController : UITableViewDelegate {
         case .advance : break // FIXME: - need impliment
         }
         
+    }
+}
+
+extension SearchDetailViewController : SearchDetailYearTableViewCellDelegate {
+    func valueChanged(_ sender: UISlider, cell: SearchDetailYearTableViewCell) {
+        let year = Int(sender.value)
+        cell.yearLabel.text = "\(year)"
+        scpresenter.year = year
     }
 }

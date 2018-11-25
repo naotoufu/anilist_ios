@@ -7,9 +7,10 @@
 //
 
 import Foundation
+// FIXME: anime only, but want to add manga type
 enum SearchDetailType: Int , CaseIterable {
     case anime
-    case manga
+//    case manga
     case studio
     case charactors
     case staff
@@ -18,14 +19,23 @@ enum SearchDetailType: Int , CaseIterable {
         switch self {
         case .anime:
             return "ANIME"
-        case .manga:
-            return "MANGA"
+//        case .manga:
+//            return "MANGA"
         case .studio:
             return "STUDIO"
         case .charactors:
             return "CHARACTORS"
         case .staff:
             return "STAFF"
+        }
+    }
+    
+    var mediaType : MediaType {
+        switch self {
+        case .anime, .studio, .charactors, .staff:
+            return .anime
+//        case .manga:
+//            return .manga
         }
     }
 }

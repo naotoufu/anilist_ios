@@ -1,4 +1,4 @@
-query MediaSearch($page: Int!, $seasonYear: Int!, $season: MediaSeason) {
+query MediaSearch($page: Int!, $mediaType: MediaType, $seasonYear: Int!, $season: MediaSeason) {
     Page(page: $page) {
         pageInfo {
             total
@@ -7,7 +7,7 @@ query MediaSearch($page: Int!, $seasonYear: Int!, $season: MediaSeason) {
             lastPage
             hasNextPage
         }
-        media(seasonYear: $seasonYear,season: $season) {
+        media(type: $mediaType, seasonYear: $seasonYear,season: $season) {
             ...MediaListFragment
         }
     }

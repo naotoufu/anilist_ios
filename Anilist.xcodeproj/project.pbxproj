@@ -40,7 +40,6 @@
 		5C955CEA21907D3D005A0EB1 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CE921907D3D005A0EB1 /* Media.swift */; };
 		5C955CED21907D98005A0EB1 /* MediaListViewFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CEC21907D98005A0EB1 /* MediaListViewFragment.swift */; };
 		5C955CEF21907EC0005A0EB1 /* MediaTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CEE21907EC0005A0EB1 /* MediaTitle.swift */; };
-		5C955CF321907F53005A0EB1 /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CF221907F53005A0EB1 /* MediaType.swift */; };
 		5C955CF521907FA9005A0EB1 /* MediaFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CF421907FA9005A0EB1 /* MediaFormat.swift */; };
 		5C955CF721908159005A0EB1 /* MediaStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CF621908159005A0EB1 /* MediaStatus.swift */; };
 		5C955CF921908247005A0EB1 /* MediaCoverImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CF821908247005A0EB1 /* MediaCoverImage.swift */; };
@@ -54,6 +53,7 @@
 		5CC999DE21A86C27004D2382 /* SearchSelectTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC999DC21A86C26004D2382 /* SearchSelectTypeViewController.swift */; };
 		5CC999DF21A86C27004D2382 /* SearchSelectTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CC999DD21A86C26004D2382 /* SearchSelectTypeViewController.xib */; };
 		5CC999E121A9003F004D2382 /* SearchDetailNavigationItemViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC999E021A9003F004D2382 /* SearchDetailNavigationItemViewControllerProtocol.swift */; };
+		5CC999E321AAC554004D2382 /* SearchDetailYearTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC999E221AAC554004D2382 /* SearchDetailYearTableViewCellDelegate.swift */; };
 		5CE3B1AD21A2EED8000003CB /* Linearicons-Free.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B1AC21A2EED8000003CB /* Linearicons-Free.ttf */; };
 		5CE3B1AE21A2EED8000003CB /* Linearicons-Free.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B1AC21A2EED8000003CB /* Linearicons-Free.ttf */; };
 		5CE3B1AF21A2EED8000003CB /* Linearicons-Free.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CE3B1AC21A2EED8000003CB /* Linearicons-Free.ttf */; };
@@ -186,7 +186,6 @@
 		5C955CE921907D3D005A0EB1 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		5C955CEC21907D98005A0EB1 /* MediaListViewFragment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListViewFragment.swift; sourceTree = "<group>"; };
 		5C955CEE21907EC0005A0EB1 /* MediaTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTitle.swift; sourceTree = "<group>"; };
-		5C955CF221907F53005A0EB1 /* MediaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
 		5C955CF421907FA9005A0EB1 /* MediaFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFormat.swift; sourceTree = "<group>"; };
 		5C955CF621908159005A0EB1 /* MediaStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaStatus.swift; sourceTree = "<group>"; };
 		5C955CF821908247005A0EB1 /* MediaCoverImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCoverImage.swift; sourceTree = "<group>"; };
@@ -200,6 +199,7 @@
 		5CC999DC21A86C26004D2382 /* SearchSelectTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSelectTypeViewController.swift; sourceTree = "<group>"; };
 		5CC999DD21A86C26004D2382 /* SearchSelectTypeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchSelectTypeViewController.xib; sourceTree = "<group>"; };
 		5CC999E021A9003F004D2382 /* SearchDetailNavigationItemViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailNavigationItemViewControllerProtocol.swift; sourceTree = "<group>"; };
+		5CC999E221AAC554004D2382 /* SearchDetailYearTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailYearTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		5CE3B1AC21A2EED8000003CB /* Linearicons-Free.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Linearicons-Free.ttf"; sourceTree = "<group>"; };
 		5CE3B1B021A2F55D000003CB /* IconFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconFont.swift; sourceTree = "<group>"; };
 		5CE3B1B421A2F78E000003CB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -424,7 +424,6 @@
 				5CE3B1C021A7C1D1000003CB /* SearchDetailTableRowType.swift */,
 				5CE3B1C421A7C42A000003CB /* SearchDetailType.swift */,
 				5CE3B22521A825BF000003CB /* SearchDetailSeasonType.swift */,
-				5C955CF221907F53005A0EB1 /* MediaType.swift */,
 				5C955CF421907FA9005A0EB1 /* MediaFormat.swift */,
 				5C955CF621908159005A0EB1 /* MediaStatus.swift */,
 			);
@@ -471,6 +470,7 @@
 			isa = PBXGroup;
 			children = (
 				5CE3B1CC21A7C6CA000003CB /* SearchDetailYearTableViewCell.swift */,
+				5CC999E221AAC554004D2382 /* SearchDetailYearTableViewCellDelegate.swift */,
 				5CE3B1CD21A7C6CA000003CB /* SearchDetailYearTableViewCell.xib */,
 			);
 			path = SearchDetail;
@@ -708,7 +708,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C955CF321907F53005A0EB1 /* MediaType.swift in Sources */,
 				5C1CEFCF219860D500F73CFD /* MediaDetailStoryTableViewCell.swift in Sources */,
 				5C09D2D5217C85D0006122AE /* MediaCollectionViewController.swift in Sources */,
 				5C955CEF21907EC0005A0EB1 /* MediaTitle.swift in Sources */,
@@ -729,6 +728,7 @@
 				5C61B24D218451310056A025 /* GraphAPIClient.swift in Sources */,
 				5C1CEFD32198747E00F73CFD /* MediaDetailTableViewHeaderFooterView.swift in Sources */,
 				5CE3B21F21A82530000003CB /* SearchSelectSeasonTableViewController.swift in Sources */,
+				5CC999E321AAC554004D2382 /* SearchDetailYearTableViewCellDelegate.swift in Sources */,
 				5C09D2D1217C85D0006122AE /* AppDelegate.swift in Sources */,
 				5CE3B1CE21A7C6CA000003CB /* SearchDetailYearTableViewCell.swift in Sources */,
 				5CE3B26721A85526000003CB /* MenuButton.swift in Sources */,

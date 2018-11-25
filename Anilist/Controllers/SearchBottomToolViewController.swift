@@ -48,7 +48,7 @@ extension SearchBottomToolViewController : SearchDecisionButtonDelegate {
             mlVC.tableView.reloadData()
             
             // fetch data
-            mlVC.presenter.fetch(seasonYear: scpresenter.year, season: scpresenter.season) {
+            mlVC.presenter.fetch(type: scpresenter.type,seasonYear: scpresenter.year, season: scpresenter.season) {
                 mlVC.tableView.reloadData()
             }
         }

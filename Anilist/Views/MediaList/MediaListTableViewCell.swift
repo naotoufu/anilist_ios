@@ -21,6 +21,11 @@ class MediaListTableViewCell: UITableViewCell {
         coverImageView.contentMode = .scaleAspectFit
         coverImageView.clipsToBounds = true
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        coverImageView.image = nil
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

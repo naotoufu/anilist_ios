@@ -22,8 +22,8 @@ class MediaListPresenter: NSObject {
     
     var hasNextPage : Bool = false
     
-    func fetch(seasonYear: Int, season: MediaSeason?, complition: @escaping ()->Void) {
-        mediaSearchModel.fetch(seasonYear: seasonYear, season: season) { [weak self] pageData, pageInfo in
+    func fetch(type: SearchDetailType = .anime, seasonYear: Int, season: MediaSeason?, complition: @escaping ()->Void) {
+        mediaSearchModel.fetch(type: type, seasonYear: seasonYear, season: season) { [weak self] pageData, pageInfo in
             guard let `self` = self else {return}
             guard let media = pageData.media else {return}
             self.hasNextPage = pageInfo.hasNextPage
@@ -34,8 +34,8 @@ class MediaListPresenter: NSObject {
         }
     }
     
-    func nextPageFetch(seasonYear: Int, season: MediaSeason?, complition: @escaping ()->Void) {
-        mediaSearchModel.nextPageFetch(seasonYear: seasonYear, season: season) { [weak self] pageData, pageInfo in
+    func nextPageFetch(type: SearchDetailType = .anime, seasonYear: Int, season: MediaSeason?, complition: @escaping ()->Void) {
+        mediaSearchModel.nextPageFetch(type: type, seasonYear: seasonYear, season: season) { [weak self] pageData, pageInfo in
             guard let `self` = self else {return}
             guard let media = pageData.media else {return}
             self.totalMediaFragments += pageInfo.hasNextPage ? pageInfo.perPage : pageInfo.total
