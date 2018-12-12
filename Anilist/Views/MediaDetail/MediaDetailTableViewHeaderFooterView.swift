@@ -9,5 +9,13 @@
 import UIKit
 
 class MediaDetailTableViewHeaderFooterView: UITableViewHeaderFooterView {
-
+    static let identifier = "\(Swift.type(of: self))"
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    func configure(_ text: String?) {
+        textLabel?.text = text
+    }
 }

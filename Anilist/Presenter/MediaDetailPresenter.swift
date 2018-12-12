@@ -8,7 +8,7 @@
 
 import Foundation
 class MediaDetailPresenter: NSObject {
-    var id : Int?
+    var mediaId : Int?
     
     fileprivate weak var viewController : MediaDetailViewController!
     
@@ -29,10 +29,16 @@ class MediaDetailPresenter: NSObject {
         return media?.title.native ?? ""
     }
     
-    func fetch(id: Int? = nil, complition: @escaping ()->Void) {
-        if let id = id { self.id = id }
-        guard let mediaId = self.id else {return}
-        mediaDetailModel.fetch(id: mediaId) { [weak self] media in
+    func fetchAll(with mediaId: Int? = nil, complition: @escaping ()->Void) {
+        if let mediaId = mediaId { self.mediaId = mediaId }
+        guard let mediaId = self.mediaId else {return}
+        fetchMedia(with: mediaId) {
+            complition()
+        }
+    }
+    
+    func fetchMedia(with id: Int!, complition: @escaping ()->Void) {
+        mediaDetailModel.fetch(id: id) { [weak self] media in
             guard let `self` = self else {return}
             self.media = MediaDetailViewFragment(fragment: media)
             complition()

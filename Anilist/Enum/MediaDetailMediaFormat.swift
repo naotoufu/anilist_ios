@@ -7,7 +7,7 @@
 //
 
 import Foundation
-enum MediaFormat {
+enum MediaDetailMediaFormat {
     // Anime broadcast on television
     case tv
     // Anime which are under 15 minutes in length and broadcast on television

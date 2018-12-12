@@ -19,25 +19,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s5Y-pP-e7c">
-                        <rect key="frame" x="16" y="48" width="288" height="244.5"/>
+                        <rect key="frame" x="16" y="11" width="288" height="281.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adQ-Ni-Jr0">
-                        <rect key="frame" x="16" y="21" width="44.5" height="17"/>
-                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="s5Y-pP-e7c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="8mO-Cw-VQ1"/>
-                    <constraint firstItem="adQ-Ni-Jr0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="c5n-0D-Hfh"/>
-                    <constraint firstItem="adQ-Ni-Jr0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="cxs-Pb-Dvh"/>
+                    <constraint firstItem="s5Y-pP-e7c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="MLy-5X-yg6"/>
                     <constraint firstAttribute="trailingMargin" secondItem="s5Y-pP-e7c" secondAttribute="trailing" id="dPz-rv-qMf"/>
-                    <constraint firstItem="s5Y-pP-e7c" firstAttribute="top" secondItem="adQ-Ni-Jr0" secondAttribute="bottom" constant="10" id="e71-r9-EPY"/>
                     <constraint firstAttribute="bottom" secondItem="s5Y-pP-e7c" secondAttribute="bottom" id="t2s-MB-vGt"/>
                 </constraints>
             </tableViewCellContentView>

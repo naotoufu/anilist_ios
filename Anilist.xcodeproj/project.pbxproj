@@ -30,6 +30,15 @@
 		5C61B24A2183706E0056A025 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C61B2492183706E0056A025 /* API.swift */; };
 		5C61B24B218375830056A025 /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CFB2BD8218212920088BD65 /* Apollo.framework */; };
 		5C61B24D218451310056A025 /* GraphAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C61B24C218451310056A025 /* GraphAPIClient.swift */; };
+		5C7962B121B274720007D3A9 /* MediaDetailHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7962AF21B274720007D3A9 /* MediaDetailHeaderViewController.swift */; };
+		5C7962B221B274720007D3A9 /* MediaDetailHeaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7962B021B274720007D3A9 /* MediaDetailHeaderViewController.xib */; };
+		5C7962B421B2787D0007D3A9 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7962B321B2787D0007D3A9 /* ContainerView.swift */; };
+		5C7962BA21B2CAFD0007D3A9 /* ScrollableUIControlTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7962B921B2CAFD0007D3A9 /* ScrollableUIControlTableView.swift */; };
+		5C7962C121B375520007D3A9 /* MediaDetailReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7962BF21B375520007D3A9 /* MediaDetailReviewTableViewCell.swift */; };
+		5C7962C221B375520007D3A9 /* MediaDetailReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7962C021B375520007D3A9 /* MediaDetailReviewTableViewCell.xib */; };
+		5C7962CA21B3EEAC0007D3A9 /* MediaDetailTableViewSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7962C921B3EEAC0007D3A9 /* MediaDetailTableViewSectionType.swift */; };
+		5C7962CC21B579C00007D3A9 /* String+Truncate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7962CB21B579C00007D3A9 /* String+Truncate.swift */; };
+		5C7962CE21B81AE50007D3A9 /* MediaDetailReviewTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7962CD21B81AE50007D3A9 /* MediaDetailReviewTableViewCellDelegate.swift */; };
 		5C955CD2218B45DE005A0EB1 /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CD1218B45DE005A0EB1 /* Utilites.swift */; };
 		5C955CD8218EB845005A0EB1 /* PageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CD7218EB845005A0EB1 /* PageInfo.swift */; };
 		5C955CDB218EC2B0005A0EB1 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CD9218EC2B0005A0EB1 /* ImageCollectionViewCell.swift */; };
@@ -40,7 +49,7 @@
 		5C955CEA21907D3D005A0EB1 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CE921907D3D005A0EB1 /* Media.swift */; };
 		5C955CED21907D98005A0EB1 /* MediaListViewFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CEC21907D98005A0EB1 /* MediaListViewFragment.swift */; };
 		5C955CEF21907EC0005A0EB1 /* MediaTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CEE21907EC0005A0EB1 /* MediaTitle.swift */; };
-		5C955CF521907FA9005A0EB1 /* MediaFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CF421907FA9005A0EB1 /* MediaFormat.swift */; };
+		5C955CF521907FA9005A0EB1 /* MediaDetailMediaFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CF421907FA9005A0EB1 /* MediaDetailMediaFormat.swift */; };
 		5C955CF721908159005A0EB1 /* MediaStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CF621908159005A0EB1 /* MediaStatus.swift */; };
 		5C955CF921908247005A0EB1 /* MediaCoverImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CF821908247005A0EB1 /* MediaCoverImage.swift */; };
 		5C955CFB219082F9005A0EB1 /* FuzzyDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C955CFA219082F9005A0EB1 /* FuzzyDate.swift */; };
@@ -176,6 +185,15 @@
 		5C61B24721836FE20056A025 /* MediaSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaSearchModel.swift; sourceTree = "<group>"; };
 		5C61B2492183706E0056A025 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		5C61B24C218451310056A025 /* GraphAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphAPIClient.swift; sourceTree = "<group>"; };
+		5C7962AF21B274720007D3A9 /* MediaDetailHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailHeaderViewController.swift; sourceTree = "<group>"; };
+		5C7962B021B274720007D3A9 /* MediaDetailHeaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaDetailHeaderViewController.xib; sourceTree = "<group>"; };
+		5C7962B321B2787D0007D3A9 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		5C7962B921B2CAFD0007D3A9 /* ScrollableUIControlTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableUIControlTableView.swift; sourceTree = "<group>"; };
+		5C7962BF21B375520007D3A9 /* MediaDetailReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailReviewTableViewCell.swift; sourceTree = "<group>"; };
+		5C7962C021B375520007D3A9 /* MediaDetailReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaDetailReviewTableViewCell.xib; sourceTree = "<group>"; };
+		5C7962C921B3EEAC0007D3A9 /* MediaDetailTableViewSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailTableViewSectionType.swift; sourceTree = "<group>"; };
+		5C7962CB21B579C00007D3A9 /* String+Truncate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Truncate.swift"; sourceTree = "<group>"; };
+		5C7962CD21B81AE50007D3A9 /* MediaDetailReviewTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailReviewTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		5C955CD1218B45DE005A0EB1 /* Utilites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilites.swift; sourceTree = "<group>"; };
 		5C955CD7218EB845005A0EB1 /* PageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageInfo.swift; sourceTree = "<group>"; };
 		5C955CD9218EC2B0005A0EB1 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -186,7 +204,7 @@
 		5C955CE921907D3D005A0EB1 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		5C955CEC21907D98005A0EB1 /* MediaListViewFragment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListViewFragment.swift; sourceTree = "<group>"; };
 		5C955CEE21907EC0005A0EB1 /* MediaTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTitle.swift; sourceTree = "<group>"; };
-		5C955CF421907FA9005A0EB1 /* MediaFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFormat.swift; sourceTree = "<group>"; };
+		5C955CF421907FA9005A0EB1 /* MediaDetailMediaFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailMediaFormat.swift; sourceTree = "<group>"; };
 		5C955CF621908159005A0EB1 /* MediaStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaStatus.swift; sourceTree = "<group>"; };
 		5C955CF821908247005A0EB1 /* MediaCoverImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCoverImage.swift; sourceTree = "<group>"; };
 		5C955CFA219082F9005A0EB1 /* FuzzyDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzyDate.swift; sourceTree = "<group>"; };
@@ -290,6 +308,7 @@
 				5C61B24C218451310056A025 /* GraphAPIClient.swift */,
 				5C955CD1218B45DE005A0EB1 /* Utilites.swift */,
 				5C955CFC2191CDF7005A0EB1 /* UIImage+Colorize.swift */,
+				5C7962CB21B579C00007D3A9 /* String+Truncate.swift */,
 				5C955CF121907F47005A0EB1 /* Enum */,
 				5C09D2D9217C85D1006122AE /* Assets.xcassets */,
 				5C955CDE218EC87F005A0EB1 /* Controllers */,
@@ -337,6 +356,9 @@
 				5C1CEFCE219860D500F73CFD /* MediaDetailStoryTableViewCell.xib */,
 				5C1CEFD22198747E00F73CFD /* MediaDetailTableViewHeaderFooterView.swift */,
 				5C1CEFD42198748D00F73CFD /* MediaDetailTableViewHeaderFooterView.xib */,
+				5C7962CD21B81AE50007D3A9 /* MediaDetailReviewTableViewCellDelegate.swift */,
+				5C7962BF21B375520007D3A9 /* MediaDetailReviewTableViewCell.swift */,
+				5C7962C021B375520007D3A9 /* MediaDetailReviewTableViewCell.xib */,
 			);
 			path = MediaDetail;
 			sourceTree = "<group>";
@@ -378,6 +400,11 @@
 				5CE3B1B921A43526000003CB /* SearchDetailViewController.xib */,
 				5C955CFE2191D748005A0EB1 /* MediaDetailViewController.swift */,
 				5C955CFF2191D748005A0EB1 /* MediaDetailViewController.xib */,
+				5C7962C921B3EEAC0007D3A9 /* MediaDetailTableViewSectionType.swift */,
+				5C7962B321B2787D0007D3A9 /* ContainerView.swift */,
+				5C7962B921B2CAFD0007D3A9 /* ScrollableUIControlTableView.swift */,
+				5C7962AF21B274720007D3A9 /* MediaDetailHeaderViewController.swift */,
+				5C7962B021B274720007D3A9 /* MediaDetailHeaderViewController.xib */,
 				5C09D2D2217C85D0006122AE /* MediaListViewController.swift */,
 				5C09D2D4217C85D0006122AE /* MediaCollectionViewController.swift */,
 			);
@@ -424,7 +451,7 @@
 				5CE3B1C021A7C1D1000003CB /* SearchDetailTableRowType.swift */,
 				5CE3B1C421A7C42A000003CB /* SearchDetailType.swift */,
 				5CE3B22521A825BF000003CB /* SearchDetailSeasonType.swift */,
-				5C955CF421907FA9005A0EB1 /* MediaFormat.swift */,
+				5C955CF421907FA9005A0EB1 /* MediaDetailMediaFormat.swift */,
 				5C955CF621908159005A0EB1 /* MediaStatus.swift */,
 			);
 			path = Enum;
@@ -611,6 +638,7 @@
 				5CE3B22221A82530000003CB /* SearchSelectSeasonTableViewController.xib in Resources */,
 				5C1CEFD52198748D00F73CFD /* MediaDetailTableViewHeaderFooterView.xib in Resources */,
 				5C1CEFD92199AB9900F73CFD /* MediaListTableViewCell.xib in Resources */,
+				5C7962C221B375520007D3A9 /* MediaDetailReviewTableViewCell.xib in Resources */,
 				5C1CEFD0219860D500F73CFD /* MediaDetailStoryTableViewCell.xib in Resources */,
 				5CE3B1D121A7C6CA000003CB /* SearchDetailYearTableViewCell.xib in Resources */,
 				5C09D2DD217C85D1006122AE /* LaunchScreen.storyboard in Resources */,
@@ -622,6 +650,7 @@
 				5CE3B23621A83F3E000003CB /* SearchBottomToolViewController.xib in Resources */,
 				5C955CE5218F3ACF005A0EB1 /* LoadingFooterView.xib in Resources */,
 				5CE3B1BD21A43526000003CB /* SearchDetailViewController.xib in Resources */,
+				5C7962B221B274720007D3A9 /* MediaDetailHeaderViewController.xib in Resources */,
 				5CC999DF21A86C27004D2382 /* SearchSelectTypeViewController.xib in Resources */,
 				5C61B2442183678B0056A025 /* MediaSearchModel.graphql in Resources */,
 				5C955D012191D748005A0EB1 /* MediaDetailViewController.xib in Resources */,
@@ -721,7 +750,7 @@
 				5CE3B22621A825BF000003CB /* SearchDetailSeasonType.swift in Sources */,
 				5CC999DE21A86C27004D2382 /* SearchSelectTypeViewController.swift in Sources */,
 				5CC999D721A85CD2004D2382 /* SearchSelectTypeTableViewControllerProtocol.swift in Sources */,
-				5C955CF521907FA9005A0EB1 /* MediaFormat.swift in Sources */,
+				5C955CF521907FA9005A0EB1 /* MediaDetailMediaFormat.swift in Sources */,
 				5CE3B24321A846B8000003CB /* SearchSelectSeasonViewController.swift in Sources */,
 				5C955CED21907D98005A0EB1 /* MediaListViewFragment.swift in Sources */,
 				5CE3B22A21A82C59000003CB /* SearchDecisionButton.swift in Sources */,
@@ -741,13 +770,17 @@
 				5CE3B1C121A7C1D1000003CB /* SearchDetailTableRowType.swift in Sources */,
 				5CC999DB21A862C6004D2382 /* SearchDoneButtonDelegate.swift in Sources */,
 				5CE3B1B121A2F55D000003CB /* IconFont.swift in Sources */,
+				5C7962BA21B2CAFD0007D3A9 /* ScrollableUIControlTableView.swift in Sources */,
 				5CE3B1B521A2F78E000003CB /* TabBarViewController.swift in Sources */,
 				5C955CFD2191CDF8005A0EB1 /* UIImage+Colorize.swift in Sources */,
 				5C955CF721908159005A0EB1 /* MediaStatus.swift in Sources */,
+				5C7962B421B2787D0007D3A9 /* ContainerView.swift in Sources */,
 				5CC999E121A9003F004D2382 /* SearchDetailNavigationItemViewControllerProtocol.swift in Sources */,
+				5C7962B121B274720007D3A9 /* MediaDetailHeaderViewController.swift in Sources */,
 				5C955CF921908247005A0EB1 /* MediaCoverImage.swift in Sources */,
 				5C955CDB218EC2B0005A0EB1 /* ImageCollectionViewCell.swift in Sources */,
 				5C61B24A2183706E0056A025 /* API.swift in Sources */,
+				5C7962CA21B3EEAC0007D3A9 /* MediaDetailTableViewSectionType.swift in Sources */,
 				5C1CEFCA2198322000F73CFD /* MediaDetailViewFragment.swift in Sources */,
 				5C955CE1218F3A69005A0EB1 /* LoadingFooterView.swift in Sources */,
 				5CE3B26321A8544B000003CB /* FilterButton.swift in Sources */,
@@ -755,9 +788,12 @@
 				5C955CE7218F4158005A0EB1 /* MediaListPresenter.swift in Sources */,
 				5C955CD2218B45DE005A0EB1 /* Utilites.swift in Sources */,
 				5CE3B21721A8203A000003CB /* SearchSelectTypeTableViewController.swift in Sources */,
+				5C7962CE21B81AE50007D3A9 /* MediaDetailReviewTableViewCellDelegate.swift in Sources */,
 				5CE3B1D621A7D256000003CB /* SearchConditionPresenter.swift in Sources */,
+				5C7962CC21B579C00007D3A9 /* String+Truncate.swift in Sources */,
 				5C955D002191D748005A0EB1 /* MediaDetailViewController.swift in Sources */,
 				5CE3B22E21A8397E000003CB /* SearchDoneButton.swift in Sources */,
+				5C7962C121B375520007D3A9 /* MediaDetailReviewTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

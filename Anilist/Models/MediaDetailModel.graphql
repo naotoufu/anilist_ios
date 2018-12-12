@@ -1,5 +1,5 @@
 query MediaDetail($id: Int!) {
-
+    
     Media(id: $id) {
         ...MediaDetailFragment
     }
@@ -13,6 +13,7 @@ fragment MediaDetailFragment on Media {
         native
         userPreferred
     }
+    format
     coverImage {
         extraLarge
         large
@@ -36,4 +37,39 @@ fragment MediaDetailFragment on Media {
         }
     }
     description(asHtml: false)
+    source
+    hashtag
+    averageScore
+    meanScore
+    popularity
+    trending
+    # externalLinks
+    # streamingEpisodes
+    reviews {
+        edges {
+            node {
+                id
+                userId
+                user {
+                    id
+                    name
+                }
+                media {
+                    id
+                    title {
+                        romaji
+                        english
+                        native
+                        userPreferred
+                    }
+                }
+                mediaId
+                userRating
+                body(asHtml: false)
+                summary
+            }
+        }
+    }
+    siteUrl
+    
 }

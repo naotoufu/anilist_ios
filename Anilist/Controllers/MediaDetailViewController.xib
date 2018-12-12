@@ -12,8 +12,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MediaDetailViewController" customModule="Anilist" customModuleProvider="target">
             <connections>
                 <outlet property="aiView" destination="g17-Zm-M4a" id="Iog-Ut-LzT"/>
+                <outlet property="headerViewContainer" destination="BiJ-Zy-nZa" id="Uhc-86-bgu"/>
                 <outlet property="navigationBar" destination="ee0-NB-FXW" id="Y9O-6n-SCg"/>
-                <outlet property="tableView" destination="eai-Nb-ZVi" id="gia-pG-1nd"/>
+                <outlet property="tableView" destination="eai-Nb-ZVi" id="M5O-Z3-RH5"/>
                 <outlet property="view" destination="WPb-Ku-lkG" id="zL7-Bx-cMA"/>
             </connections>
         </placeholder>
@@ -25,12 +26,21 @@
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="g17-Zm-M4a">
                     <rect key="frame" x="197" y="438" width="20" height="20"/>
                 </activityIndicatorView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eai-Nb-ZVi">
-                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eai-Nb-ZVi" customClass="ScrollableUIControlTableView" customModule="Anilist" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BiJ-Zy-nZa" customClass="ContainerView" customModule="Anilist" customModuleProvider="target">
+                    <rect key="frame" x="20" y="88" width="374" height="133"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ee0-NB-FXW">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textAttributes>
                     <items>
                         <navigationItem title="Title" id="rln-6B-WD2">
                             <barButtonItem key="leftBarButtonItem" systemItem="stop" id="mcI-0p-exE">
@@ -49,12 +59,13 @@
                 <constraint firstItem="ee0-NB-FXW" firstAttribute="top" secondItem="N8s-YJ-byP" secondAttribute="top" id="YZz-ry-oxZ"/>
                 <constraint firstItem="ee0-NB-FXW" firstAttribute="trailing" secondItem="N8s-YJ-byP" secondAttribute="trailing" id="c4d-hB-r3w"/>
                 <constraint firstItem="N8s-YJ-byP" firstAttribute="bottom" secondItem="eai-Nb-ZVi" secondAttribute="bottom" id="eq0-ab-two"/>
-                <constraint firstItem="eai-Nb-ZVi" firstAttribute="top" secondItem="ee0-NB-FXW" secondAttribute="bottom" id="o8Y-xI-tVN"/>
+                <constraint firstItem="eai-Nb-ZVi" firstAttribute="top" secondItem="WPb-Ku-lkG" secondAttribute="top" id="o8Y-xI-tVN"/>
                 <constraint firstItem="ee0-NB-FXW" firstAttribute="leading" secondItem="N8s-YJ-byP" secondAttribute="leading" id="sEz-7U-Ezx"/>
                 <constraint firstItem="eai-Nb-ZVi" firstAttribute="leading" secondItem="N8s-YJ-byP" secondAttribute="leading" id="ybu-xY-Cuj"/>
                 <constraint firstItem="g17-Zm-M4a" firstAttribute="centerY" secondItem="WPb-Ku-lkG" secondAttribute="centerY" id="zCM-UO-8sl"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="N8s-YJ-byP"/>
+            <point key="canvasLocation" x="89.855072463768124" y="35.491071428571423"/>
         </view>
     </objects>
 </document>

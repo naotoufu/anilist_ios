@@ -86,7 +86,7 @@ extension MediaListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard presenter.mediaFragments.count > 0 else {return}
         let mediaFragment = presenter.mediaFragments[indexPath.row]
-        let vc = MediaDetailViewController(id: mediaFragment.id)
+        let vc = MediaDetailViewController(mediaId: mediaFragment.id)
         self.present(vc, animated: true, completion: nil)
     }
 }
