@@ -1,8 +1,11 @@
 # anilist_ios
-Anilisf For iOS
+Anilisf For iOS (unofficially)
 
-ProtoType App
+Web: https://anilist.co
 
-MVP Architecture Sample
+- ProtoType App
 
-https://anilist.co/home
+- MVP Architecture Sample
+
+
+
